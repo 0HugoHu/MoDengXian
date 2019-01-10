@@ -19,11 +19,16 @@
 > Read pieces of news while waiting for the ads, relax your mind while loading the app data.  
 >  All you need is to merely slide down the notification bar. Say **GOOD BYE** to the ads and **NEVER** wait when there is no network!
 
+
+<div align=center>
+	
 ## `图片展示 Picture`
 
-<div align=center>! [阅读视图示例](https://s2.ax1x.com/2019/01/10/FO7O76.jpg)
+![阅读视图示例](https://s2.ax1x.com/2019/01/10/FO7O76.jpg)
 
 ## `开发日志 Dev-Log`
+
+<div align=left> 
 
 | 2018 12 06 | Version d1.0 | Code: 1 |
 |--|--|--|
