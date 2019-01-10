@@ -2,7 +2,6 @@
 An app to save your time while watching the ads before a video or there is no network. Do all things just on the notification bar!!!
 
 开发日志：
-
 ********2018 12 06********        Version d 1.0   Code:1
 Dev：
     1.实现通知栏自定义大图显示
