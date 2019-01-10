@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="27dp"
+        android:src="@drawable/icon"
+        android:adjustViewBounds="true"
+        android:maxHeight="27dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerInside"
+        android:maxWidth="27dp"
+        android:id="@+id/Normal_Icon"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_height="27dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_toRightOf="@id/Normal_Icon"
+        android:text="@string/main_title_game"
+        android:textColor="#424242"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/Normal_Game"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="#424242"
+        android:layout_toRightOf="@id/Normal_Game"
+        android:text="@string/main_title_reading"
+        android:id="@+id/Normal_Reading"
+        android:layout_marginLeft="35dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/Normal_Reading"
+        android:text="@string/main_title_favourite"
+        android:textColor="#424242"
+        android:id="@+id/Normal_Favourite"
+        android:layout_marginLeft="35dp"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_alignStart="@id/Normal_Favourite"
+        android:layout_alignEnd="@id/Normal_Favourite"
+        android:layout_marginTop="33dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/d0"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/Normal_Favourite"
+        android:text="@string/main_title_relax"
+        android:textColor="#424242"
+        android:id="@+id/Normal_Relax"
+        android:layout_marginLeft="35dp"/>
+</RelativeLayout>

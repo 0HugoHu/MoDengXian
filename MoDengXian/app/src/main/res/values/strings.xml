@@ -1,0 +1,123 @@
+<resources>
+    <string name="btn1_description">Start foreground service</string>
+    <string name="btn1_title" >Start</string>
+    <string name="simple_service_title">Simple Service</string>
+    <string name="simple_service_desc">Simple Service from the OTest app</string>
+    <string name="app_name">莫等闲</string>
+    <string name="main_create_noti2_btn">Send</string>
+
+    <string name="btnA_title">Go to Settings</string>
+    <string name="noti_channel_default">Primary Channel</string>
+    <string name="noti1_title">Notification 1 Title</string>
+    <string name="primary1_body">The content</string>
+    <string name="noti2_title">Second notification</string>
+    <string name="secondary1_body">Notification body text.</string>
+    <string name="noti_channel_second">Secondary Channel</string>
+
+    <string name="main_primary_title">Primary Channel</string>
+    <string name="main_primary_send1">Send 1</string>
+    <string name="main_primary_send2">Send 2</string>
+    <string name="main_primary_config">Go to primary settings</string>
+
+    <string name="main_secondary_title">Secondary Channel</string>
+    <string name="main_secondary_send1">Send 1</string>
+    <string name="main_secondary_send2">Send 2</string>
+    <string name="main_secondary_config">Go to secondary settings</string>
+    <string name="primary2_body">Second Notification for Primary Channel</string>
+    <string name="secondary2_body">Second Notification for Secondary Channel</string>
+
+    <string name="accessibility_tip">莫等闲的辅助功能</string>
+    <string name="accessibility_desc">开启辅助功能，让你的手机更智能一点\n哈哈哈哈哈\n傻逼才开</string>
+
+
+    <string name="main_title_game">投一投</string>
+    <string name="main_title_reading">阅读</string>
+    <string name="main_title_favourite">收藏</string>
+    <string name="main_title_relax">放松</string>
+
+
+
+    <string-array name="newstitle">
+        <item>嫦娥四号：在月亮背面遇见你</item>
+        <item>万里行，万里情—习主席领航之旅纪实</item>
+        <item>大型电视纪录片《我们一起走过》</item>
+        <item>共享单车，中国创业史上最疯狂的试错?</item>
+        <item>华为面临以美为首“五眼联盟”集体封杀？</item>
+        <item>习近平会见朝鲜外相李勇浩</item>
+    </string-array>
+
+    <string-array name="newssubtitle">
+        <item>月球背面将迎来人类首个软着陆航天器</item>
+        <item>新华社12月7日</item>
+        <item>第十一集、第十二集</item>
+        <item>南方周末12月7日</item>
+        <item>新京报讯11月6日</item>
+        <item>新华社12月7日</item>
+    </string-array>
+
+    <string-array name="newscontent">
+        <item>12月8日2时23分，我国使用长征三号乙运载火箭在西昌卫星发射中心发射嫦娥四号探测器，将探测器送入地月转移轨道。按计划，探测器将飞向月球，经过在轨飞行、轨道修正、近月制动、变轨等步骤后最终着陆月面。</item>
+        <item>11月27日至12月5日，国家主席习近平应邀对西班牙、阿根廷、巴拿马、葡萄牙进行国事访问并出席在阿根廷布宜诺斯艾利斯举行的二十国集团（G20）领导人第十三次峰会。</item>
+        <item>由中共中央宣传部、中央广播电视总台联合制作的《我们一起走过——致敬改革开放40周年》十八集大型电视纪录片12月2日起在央视综合频道20:00档每天播出两集，次日晚间21:18央视财经频道重播一集。</item>
+        <item>2017年5月，20国青年评出高铁、扫码支付、共享单车和网购新四大发明时，中国人很高兴，歪果仁很服气，但不到一年摩拜卖身，ofo度日维艰，迅速退去光环坠落凡间。</item>
+        <item>12月5日，英国最大电信运营商英国电信已宣布将华为从其核心5G网络竞标者名单中移除，不过其表示将在5G网络的部分领域继续使用华为设备。目前美国、澳大利亚、新西兰和英国均已表示将华为排除在5G建设之外。</item>
+        <item>习近平请李勇浩转达对金正恩委员长的诚挚问候。习近平指出，今年金正恩委员长三次访问中国，我同他就深化中朝友好合作、促进地区和平稳定发展等重大问题全面深入交换意见，很高兴看到双方达成的各项重要共识得到落实。</item>
+    </string-array>
+
+    <string-array name="imgtitle">
+        <item>英国伊丽莎白女王</item>
+        <item>5G即将到来</item>
+        <item>金球奖再曝丑闻</item>
+        <item>意境之禅</item>
+        <item>我喜欢现在的自己，我怀念过去的我们</item>
+        <item>最美的河——漓江</item>
+    </string-array>
+
+    <string-array name="imgsubtitle">
+        <item>12月7日</item>
+        <item>12月7日</item>
+        <item>已倒闭六年的媒体也投了票</item>
+        <item>12月7日</item>
+        <item>12月7日</item>
+        <item>12月7日</item>
+    </string-array>
+
+    <string-array name="voctitle">
+        <item>ghcgch</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="vocyinbiao">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="voccontent">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="vocmean">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string name="txt_divide0">-------微信-------</string>
+</resources>
