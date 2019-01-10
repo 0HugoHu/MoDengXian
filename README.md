@@ -17,7 +17,7 @@
 
 ## `图片展示 Picture`
 
-![enter image description here](https://s2.ax1x.com/2019/01/10/FO75hF.jpg)
+[![阅读视图示例](https://s2.ax1x.com/2019/01/10/FO75hF.md.jpg)](https://imgchr.com/i/FO75hF)
 
 ## `开发日志 Dev-Log`
 
