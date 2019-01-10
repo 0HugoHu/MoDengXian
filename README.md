@@ -1,7 +1,9 @@
 <div align=center> 
+	
 # 莫等闲 MoDengXian
 
 ## `项目简介 Intro`
+
 <div align=left> 
 	
 > **社会价值：** 解决了用户必须观看视频前漫长广告的问题，缓解了网络不佳时用户等待应用数据加载的焦虑。填充零碎时间，助力高效生活。
@@ -19,7 +21,7 @@
 
 ## `图片展示 Picture`
 
-<div align=center>![阅读视图示例](https://s2.ax1x.com/2019/01/10/FO7O76.jpg)
+<div align=center>! [阅读视图示例](https://s2.ax1x.com/2019/01/10/FO7O76.jpg)
 
 ## `开发日志 Dev-Log`
 
