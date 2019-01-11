@@ -107,3 +107,12 @@
     1.无障碍功能无法获取一般由程序绘制的View的文字内容
 
 ***
+***
+| 2019 01 11 | Version d3.1 | Code: 8 |
+|--|--|--|
+
+	Dev：
+    1.Tim、知乎、新浪新闻等可以获取点击的整段文字
+
+	Debug：
+    1.无障碍功能“this service is malfunctioning”错误：部分点击区域没有node或内容，强行getText或toString出错
