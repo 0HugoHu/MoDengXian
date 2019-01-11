@@ -107,3 +107,18 @@
     1.无障碍功能无法获取一般由程序绘制的View的文字内容
 
 ***
+***
+| 2019 01 11 | Version d3.1 | Code: 8 |
+|--|--|--|
+
+	Dev：
+    1.Tim、知乎、新浪新闻等可以获取点击的整段文字
+    2.使用SharePreference保存是否开启文字拾取设置
+    3.其它应用可以分享内容到莫等闲
+    4.读取剪切板，在测试WebView中打开网页
+    5.尝试使用腾讯开源项目VasSonic的WebView控件
+
+	Debug：
+    1.无障碍功能“this service is malfunctioning”错误：部分点击区域没有node或内容，强行getText或toString出错
+    2.安卓9.0后对未加密链接拒绝访问（非https字段）net:err_cleartext_not_permitted
+    
