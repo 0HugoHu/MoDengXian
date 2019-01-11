@@ -116,6 +116,7 @@
     2.使用SharePreference保存是否开启文字拾取设置
     3.其它应用可以分享内容到莫等闲
     4.读取剪切板，在测试WebView中打开网页
+    5.尝试使用腾讯开源项目VasSonic的WebView控件
 
 	Debug：
     1.无障碍功能“this service is malfunctioning”错误：部分点击区域没有node或内容，强行getText或toString出错
