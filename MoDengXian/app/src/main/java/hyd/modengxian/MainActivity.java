@@ -1,6 +1,5 @@
 package hyd.modengxian;
 
-import android.accessibilityservice.AccessibilityService;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -10,13 +9,15 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
-
+import java.util.ArrayList;
 
 
 public class MainActivity extends Activity {
@@ -51,6 +52,10 @@ public class MainActivity extends Activity {
     Boolean Tag_dislike = false;
     Boolean Tag_Isbigimg = false;
 
+    public boolean onAccessibilityService=true;
+    private SharedPreferences sp ;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +65,7 @@ public class MainActivity extends Activity {
 
         init();
         broadcast_init();
+
 
 
     }
@@ -115,11 +121,27 @@ public class MainActivity extends Activity {
 
         if (!OpenAccessibilitySettingHelper.isAccessibilitySettingsOn(this,
                 MyAccessibilityService.class.getName())){// 判断服务是否开启
+            Toast.makeText(this, "请找到“莫等闲”并开启辅助功能", Toast.LENGTH_SHORT).show();
             OpenAccessibilitySettingHelper.jumpToSettingPage(this);// 跳转到开启页面
         }else {
-            Toast.makeText(this, "服务已开启", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "服务已开启", Toast.LENGTH_SHORT).show();
         }
 
+//获取应用接收分享
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        String type = intent.getType();
+        if (Intent.ACTION_SEND.equals(action)&&type!=null){
+            if ("text/plain".equals(type)){
+                dealTextMessage(intent);
+            }else if(type.startsWith("image/")){
+                dealPicStream(intent);
+            }
+        }else if (Intent.ACTION_SEND_MULTIPLE.equals(action)&&type!=null){
+            if (type.startsWith("image/")){
+                dealMultiplePicStream(intent);
+            }
+        }
     }
 
     public void broadcast_init(){
@@ -509,11 +531,6 @@ public class MainActivity extends Activity {
                 }
                 break;
 
-            case MyAccessibilityService:
-                Intent intent = new Intent(this, MyAccessibilityService.class);
-                startService(intent);
-
-                break;
         }
 
 
@@ -669,8 +686,30 @@ public class MainActivity extends Activity {
         @Override
         public void onReceive(Context context, Intent intent)
         {
-            sendNotification(MyAccessibilityService);
+            sp = getSharedPreferences("Setting", Context.MODE_PRIVATE);
+            SharedPreferences.Editor edit = sp.edit();
+            if(onAccessibilityService) {
+                onAccessibilityService = false;
+                edit.putBoolean("onAccessibilityService", onAccessibilityService);
+            }else {
+                onAccessibilityService = true;
+                edit.putBoolean("onAccessibilityService", onAccessibilityService);
+            }
+            edit.apply();
         }
+    }
+
+    void dealTextMessage(Intent intent){
+        String share = intent.getStringExtra(Intent.EXTRA_TEXT);
+        String title = intent.getStringExtra(Intent.EXTRA_TITLE);
+    }
+
+    void dealPicStream(Intent intent){
+        Uri uri = intent.getParcelableExtra(Intent.EXTRA_STREAM);
+    }
+
+    void dealMultiplePicStream(Intent intent){
+        ArrayList<Uri> arrayList = intent.getParcelableArrayListExtra(intent.EXTRA_STREAM);
     }
 
 
