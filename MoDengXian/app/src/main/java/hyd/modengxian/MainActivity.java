@@ -1,11 +1,15 @@
 package hyd.modengxian;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
+import android.content.ClipData;
+import android.content.ClipDescription;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -14,8 +18,20 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
+import android.text.TextUtils;
+import android.view.WindowManager;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.RemoteViews;
 import android.widget.Toast;
+
+import com.tencent.sonic.sdk.SonicConfig;
+import com.tencent.sonic.sdk.SonicEngine;
+import com.tencent.sonic.sdk.SonicSession;
+import com.tencent.sonic.sdk.SonicSessionConfig;
 
 import java.util.ArrayList;
 
@@ -54,7 +70,13 @@ public class MainActivity extends Activity {
 
     public boolean onAccessibilityService=true;
     private SharedPreferences sp ;
+    public String url;
+    private WebView webView;
+    public final static String PARAM_URL = "param_url";
 
+    public final static String PARAM_MODE = "param_mode";
+
+    private SonicSession sonicSession;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +88,7 @@ public class MainActivity extends Activity {
         init();
         broadcast_init();
 
-
+        test();
 
     }
 
@@ -702,6 +724,8 @@ public class MainActivity extends Activity {
     void dealTextMessage(Intent intent){
         String share = intent.getStringExtra(Intent.EXTRA_TEXT);
         String title = intent.getStringExtra(Intent.EXTRA_TITLE);
+
+
     }
 
     void dealPicStream(Intent intent){
@@ -710,6 +734,39 @@ public class MainActivity extends Activity {
 
     void dealMultiplePicStream(Intent intent){
         ArrayList<Uri> arrayList = intent.getParcelableArrayListExtra(intent.EXTRA_STREAM);
+    }
+
+
+    public void test(){
+        webView=findViewById(R.id.activity_main_WebView);
+
+        ClipboardManager clipboardManager = (ClipboardManager) this.getSystemService(Context.CLIPBOARD_SERVICE);
+        /* 判断剪切版时候有内容 */
+        if (clipboardManager != null && clipboardManager.hasPrimaryClip()) {
+            ClipData clipData = clipboardManager.getPrimaryClip();
+            String text = clipData.getItemAt(0).getText().toString();
+            url=text;
+        }
+        VasSonicWebView();
+    }
+
+    public void VasSonicWebView(){
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (null != sonicSession) {
+            sonicSession.destroy();
+            sonicSession = null;
+        }
+        super.onDestroy();
     }
 
 
