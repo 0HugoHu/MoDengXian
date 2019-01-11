@@ -20,10 +20,8 @@
             android:name=".MyAccessibilityService"
             android:enabled="true"
             android:exported="true"
-            android:canRetrieveWindowContent="true"
             android:label="@string/accessibility_tip"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
-            android:process=":BackgroundService">
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
