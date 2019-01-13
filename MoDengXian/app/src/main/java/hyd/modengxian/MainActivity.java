@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
     private static final int Game = 1003;
     private static final int Relax = 1004;
     private static final int MyAccessibilityService = 1005;
-
+    private static final int Initial_Notification = 1006;
 
 
     private String[] TxtTitleList;
@@ -67,8 +67,10 @@ public class MainActivity extends Activity {
     Boolean Tag_like = false;
     Boolean Tag_dislike = false;
     Boolean Tag_Isbigimg = false;
+    Boolean Tag_onAccessibilityService=true;
+    Boolean Tag_isTextwithImg = false;
 
-    public boolean onAccessibilityService=true;
+
     private SharedPreferences sp ;
     public String url;
     private WebView webView;
@@ -87,7 +89,7 @@ public class MainActivity extends Activity {
 
         init();
         broadcast_init();
-
+        sendNotification(Initial_Notification);
         test();
 
     }
@@ -109,36 +111,6 @@ public class MainActivity extends Activity {
         VocYinbiaoList=resources.getStringArray(R.array.vocyinbiao);
         VocContentList=resources.getStringArray(R.array.voccontent);
         VocMeanList=resources.getStringArray(R.array.vocmean);
-
-//常驻通知栏消息
-        NotificationChannel noti_id_0 = new NotificationChannel("0",
-                "常驻通知栏", NotificationManager.IMPORTANCE_HIGH);
-        manger.createNotificationChannel(noti_id_0);
-        RemoteViews view_id_0 = new RemoteViews(getPackageName(), R.layout.normal);
-        Notification notification_id_0 = new NotificationCompat.Builder(this,"0")
-                .setSmallIcon(R.drawable.icon)
-                .setTicker("常驻通知栏")
-                .setOngoing(true)
-                .setContent(view_id_0)//设置普通notification_id_0视图
-                .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
-                .build();
-
-        Intent action_id_0=new Intent("Main_Game");
-        view_id_0.setOnClickPendingIntent(R.id.Normal_Game,PendingIntent.getBroadcast(MainActivity.this, 0, action_id_0,PendingIntent.FLAG_UPDATE_CURRENT));
-
-        Intent action2_id_02=new Intent("Main_Reading");
-        view_id_0.setOnClickPendingIntent(R.id.Normal_Reading,PendingIntent.getBroadcast(MainActivity.this, 1, action2_id_02,PendingIntent.FLAG_UPDATE_CURRENT));
-
-        Intent action3_id_03=new Intent("Main_Favourite");
-        view_id_0.setOnClickPendingIntent(R.id.Normal_Favourite,PendingIntent.getBroadcast(MainActivity.this, 2, action3_id_03,PendingIntent.FLAG_UPDATE_CURRENT));
-
-        Intent action4_id_04=new Intent("Main_Relax");
-        view_id_0.setOnClickPendingIntent(R.id.Normal_Relax,PendingIntent.getBroadcast(MainActivity.this, 3, action4_id_04,PendingIntent.FLAG_UPDATE_CURRENT));
-
-        NotificationManager manager_id_0 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        if (manager_id_0 != null) {
-            manager_id_0.notify(0, notification_id_0);
-        }
 
 
         if (!OpenAccessibilitySettingHelper.isAccessibilitySettingsOn(this,
@@ -225,6 +197,56 @@ public class MainActivity extends Activity {
             Tag_Isbigimg = false;
 
         switch (id) {
+            case Initial_Notification:
+                //常驻通知栏消息
+                manger.cancelAll();
+                NotificationChannel noti_id_0 = new NotificationChannel("0",
+                        "常驻通知栏", NotificationManager.IMPORTANCE_HIGH);
+                noti_id_0.enableLights(false);
+                noti_id_0.enableVibration(false);
+                noti_id_0.setSound(null,null);
+                noti_id_0.setVibrationPattern(new long[]{0});
+                manger.createNotificationChannel(noti_id_0);
+                RemoteViews view_id_0 = new RemoteViews(getPackageName(), R.layout.normal);
+
+                if(Tag_onAccessibilityService) {
+                    view_id_0.setImageViewResource(R.id.Normal_Icon, R.drawable.icon_click);
+                }else{
+                    view_id_0.setImageViewResource(R.id.Normal_Icon, R.drawable.icon);
+                }
+
+                Notification notification_id_0 = new NotificationCompat.Builder(this,"0")
+                        .setSmallIcon(R.drawable.icon)
+                        .setTicker("常驻通知栏")
+                        .setOngoing(true)
+                        .setContent(view_id_0)//设置普通notification_id_0视图
+                        .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
+                        .build();
+
+                Intent action_id_0=new Intent("Main_Game");
+                view_id_0.setOnClickPendingIntent(R.id.Normal_Game,PendingIntent.getBroadcast(MainActivity.this, 0, action_id_0,PendingIntent.FLAG_UPDATE_CURRENT));
+
+                Intent action2_id_02=new Intent("Main_Reading");
+                view_id_0.setOnClickPendingIntent(R.id.Normal_Reading,PendingIntent.getBroadcast(MainActivity.this, 1, action2_id_02,PendingIntent.FLAG_UPDATE_CURRENT));
+
+                Intent action3_id_03=new Intent("Main_Favourite");
+                view_id_0.setOnClickPendingIntent(R.id.Normal_Favourite,PendingIntent.getBroadcast(MainActivity.this, 2, action3_id_03,PendingIntent.FLAG_UPDATE_CURRENT));
+
+                Intent action4_id_04=new Intent("Main_Relax");
+                view_id_0.setOnClickPendingIntent(R.id.Normal_Relax,PendingIntent.getBroadcast(MainActivity.this, 3, action4_id_04,PendingIntent.FLAG_UPDATE_CURRENT));
+
+                Intent action5_id_0=new Intent("Main_AccessibilityService");
+                view_id_0.setOnClickPendingIntent(R.id.Normal_Icon,PendingIntent.getBroadcast(MainActivity.this, 5, action5_id_0,PendingIntent.FLAG_UPDATE_CURRENT));
+
+
+                NotificationManager manager_id_0 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                if (manager_id_0 != null) {
+                    manager_id_0.notify(0, notification_id_0);
+                }
+
+                break;
+
+
             case Big_Image:
 
                 NotificationChannel noti_id_1_Big_Image = new NotificationChannel("1",
@@ -278,6 +300,15 @@ public class MainActivity extends Activity {
                         "大图", NotificationManager.IMPORTANCE_HIGH);
                 manger.createNotificationChannel(noti_id_0_Big_Image);
                 RemoteViews view_id_0_Big_Image = new RemoteViews(getPackageName(), R.layout.normal_reading);
+
+
+                if(Tag_onAccessibilityService) {
+                    view_id_0_Big_Image.setImageViewResource(R.id.Normal_Icon, R.drawable.icon_click);
+                }else{
+                    view_id_0_Big_Image.setImageViewResource(R.id.Normal_Icon, R.drawable.icon);
+                }
+
+
                 Notification notification_id_0_Big_Image = new NotificationCompat.Builder(this,"0")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("大图")
@@ -361,6 +392,15 @@ public class MainActivity extends Activity {
                         "图文", NotificationManager.IMPORTANCE_HIGH);
                 manger.createNotificationChannel(noti_id_0_Image_with_Text);
                 RemoteViews view_id_0_Image_with_Text = new RemoteViews(getPackageName(), R.layout.normal_reading);
+
+                if(Tag_onAccessibilityService) {
+                    view_id_0_Image_with_Text.setImageViewResource(R.id.Normal_Icon, R.drawable.icon_click);
+                }else{
+                    view_id_0_Image_with_Text.setImageViewResource(R.id.Normal_Icon, R.drawable.icon);
+                }
+
+
+
                 Notification notification_id_0_Image_with_Text = new NotificationCompat.Builder(this,"0")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("图文")
@@ -418,6 +458,13 @@ public class MainActivity extends Activity {
                         "收藏", NotificationManager.IMPORTANCE_HIGH);
                 manger.createNotificationChannel(noti_id_0_Favourite);
                 RemoteViews view_id_0_Favourite = new RemoteViews(getPackageName(), R.layout.normal_favourite);
+
+                if(Tag_onAccessibilityService) {
+                    view_id_0_Favourite.setImageViewResource(R.id.Normal_Icon, R.drawable.icon_click);
+                }else{
+                    view_id_0_Favourite.setImageViewResource(R.id.Normal_Icon, R.drawable.icon);
+                }
+
                 Notification notification_id_0_Favourite = new NotificationCompat.Builder(this,"0")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("收藏")
@@ -437,6 +484,9 @@ public class MainActivity extends Activity {
 
                 Intent action4_id_0_Favourite=new Intent("Main_Relax");
                 view_id_0_Favourite.setOnClickPendingIntent(R.id.Normal_Relax,PendingIntent.getBroadcast(MainActivity.this, 4, action4_id_0_Favourite,PendingIntent.FLAG_UPDATE_CURRENT));
+
+                Intent action5_id_0_Favourite=new Intent("Main_AccessibilityService");
+                view_id_0_Favourite.setOnClickPendingIntent(R.id.Normal_Icon,PendingIntent.getBroadcast(MainActivity.this, 5, action5_id_0_Favourite,PendingIntent.FLAG_UPDATE_CURRENT));
 
 
                 NotificationManager manager_id_0_Favourite = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -472,6 +522,14 @@ public class MainActivity extends Activity {
                         "游戏", NotificationManager.IMPORTANCE_HIGH);
                 manger.createNotificationChannel(noti_id_0_Game);
                 RemoteViews view_id_0_Game = new RemoteViews(getPackageName(), R.layout.normal_game);
+
+                if(Tag_onAccessibilityService) {
+                    view_id_0_Game.setImageViewResource(R.id.Normal_Icon, R.drawable.icon_click);
+                }else{
+                    view_id_0_Game.setImageViewResource(R.id.Normal_Icon, R.drawable.icon);
+                }
+
+
                 Notification notification_id_0_Game = new NotificationCompat.Builder(this,"0")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("游戏")
@@ -491,6 +549,9 @@ public class MainActivity extends Activity {
 
                 Intent action4_id_0_Game=new Intent("Main_Relax");
                 view_id_0_Game.setOnClickPendingIntent(R.id.Normal_Relax,PendingIntent.getBroadcast(MainActivity.this, 4, action4_id_0_Game,PendingIntent.FLAG_UPDATE_CURRENT));
+
+                Intent action5_id_0_Game=new Intent("Main_AccessibilityService");
+                view_id_0_Game.setOnClickPendingIntent(R.id.Normal_Icon,PendingIntent.getBroadcast(MainActivity.this, 5, action5_id_0_Game,PendingIntent.FLAG_UPDATE_CURRENT));
 
 
                 NotificationManager manager_id_0_Game = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -526,6 +587,13 @@ public class MainActivity extends Activity {
                         "游戏", NotificationManager.IMPORTANCE_HIGH);
                 manger.createNotificationChannel(noti_id_0_Relax);
                 RemoteViews view_id_0_Relax = new RemoteViews(getPackageName(), R.layout.normal_relax);
+
+                if(Tag_onAccessibilityService) {
+                    view_id_0_Relax.setImageViewResource(R.id.Normal_Icon, R.drawable.icon_click);
+                }else{
+                    view_id_0_Relax.setImageViewResource(R.id.Normal_Icon, R.drawable.icon);
+                }
+
                 Notification notification_id_0_Relax = new NotificationCompat.Builder(this,"0")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("游戏")
@@ -546,6 +614,9 @@ public class MainActivity extends Activity {
                 Intent action4_id_0_Relax=new Intent("Main_Relax");
                 view_id_0_Relax.setOnClickPendingIntent(R.id.Normal_Relax,PendingIntent.getBroadcast(MainActivity.this, 4, action4_id_0_Relax,PendingIntent.FLAG_UPDATE_CURRENT));
 
+                Intent action5_id_0_Relax=new Intent("Main_AccessibilityService");
+                view_id_0_Relax.setOnClickPendingIntent(R.id.Normal_Icon,PendingIntent.getBroadcast(MainActivity.this, 5, action5_id_0_Relax,PendingIntent.FLAG_UPDATE_CURRENT));
+
 
                 NotificationManager manager_id_0_Relax = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 if (manager_id_0_Relax != null) {
@@ -554,8 +625,6 @@ public class MainActivity extends Activity {
                 break;
 
         }
-
-
 
     }
 
@@ -710,15 +779,17 @@ public class MainActivity extends Activity {
         {
             sp = getSharedPreferences("Setting", Context.MODE_PRIVATE);
             SharedPreferences.Editor edit = sp.edit();
-            if(onAccessibilityService) {
-                onAccessibilityService = false;
-                edit.putBoolean("onAccessibilityService", onAccessibilityService);
+            if(Tag_onAccessibilityService) {
+                Tag_onAccessibilityService = false;
+                edit.putBoolean("onAccessibilityService", Tag_onAccessibilityService);
             }else {
-                onAccessibilityService = true;
-                edit.putBoolean("onAccessibilityService", onAccessibilityService);
+                Tag_onAccessibilityService = true;
+                edit.putBoolean("onAccessibilityService", Tag_onAccessibilityService);
             }
             edit.apply();
+            sendNotification(Initial_Notification);
         }
+
     }
 
     void dealTextMessage(Intent intent){
@@ -744,8 +815,7 @@ public class MainActivity extends Activity {
         /* 判断剪切版时候有内容 */
         if (clipboardManager != null && clipboardManager.hasPrimaryClip()) {
             ClipData clipData = clipboardManager.getPrimaryClip();
-            String text = clipData.getItemAt(0).getText().toString();
-            url=text;
+            url= clipData.getItemAt(0).getText().toString();
         }
         VasSonicWebView();
     }
