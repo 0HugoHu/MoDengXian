@@ -107,7 +107,6 @@
     1.无障碍功能无法获取一般由程序绘制的View的文字内容
 
 ***
-***
 | 2019 01 11 | Version d3.1 | Code: 8 |
 |--|--|--|
 
@@ -122,3 +121,13 @@
     1.无障碍功能“this service is malfunctioning”错误：部分点击区域没有node或内容，强行getText或toString出错
     2.安卓9.0后对未加密链接拒绝访问（非https字段）net:err_cleartext_not_permitted
     
+    ***
+***
+| 2019 01 13 | Version d3.2 | Code: 9 |
+|--|--|--|
+
+	Dev：
+    1.更改应用图标及通知栏显示图标
+
+	Debug：
+    1.
