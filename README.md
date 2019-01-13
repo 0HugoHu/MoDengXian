@@ -129,6 +129,7 @@
 	Dev：
     1.更改应用图标及通知栏显示图标
     2.更新最近新闻
+    3.完善收藏和放松版块的展示视图
 
 	Debug：
-    1.
+    1.Android Sutdio默认的app:srcCompat方法设置的ImageView图片会无法显示？
