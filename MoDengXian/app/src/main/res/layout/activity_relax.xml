@@ -27,7 +27,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
-        app:srcCompat="@drawable/play" />
+        android:background="@drawable/play" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -36,7 +36,7 @@
         android:layout_alignBottom="@+id/imageView3"
         android:layout_alignParentStart="true"
         android:layout_marginStart="80dp"
-        app:srcCompat="@drawable/play_previous" />
+        android:background="@drawable/play_previous" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -45,5 +45,11 @@
         android:layout_alignBottom="@+id/imageView3"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="80dp"
-        app:srcCompat="@drawable/play_next" />
+        android:background="@drawable/play_next" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/alert_dark_frame" />
 </RelativeLayout>
