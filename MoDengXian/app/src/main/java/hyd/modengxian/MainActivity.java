@@ -188,6 +188,13 @@ public class MainActivity extends Activity {
         IntentFilter filter11=new IntentFilter("Main_AccessibilityService");
         registerReceiver(MyAccibilityService, filter11);
 
+
+//关闭按钮
+        MyBroadCast7 Close = new MyBroadCast7();
+        IntentFilter filter12=new IntentFilter("Close");
+        registerReceiver(Close, filter12);
+
+
     }
 
     public void sendNotification(int id) {
@@ -219,6 +226,8 @@ public class MainActivity extends Activity {
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("常驻通知栏")
                         .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("常驻")
                         .setContent(view_id_0)//设置普通notification_id_0视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
                         .build();
@@ -273,7 +282,9 @@ public class MainActivity extends Activity {
                 Notification notification_id_1_Big_Image = new NotificationCompat.Builder(this,"1")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("大图")
-                        .setOngoing(false)
+                        .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("其它")
                         .setContent(view_id_1_Big_Image)//设置普通notification_id_1_Big_Image视图
                         .setCustomBigContentView(bigView_id_1_Big_Image)//设置显示bigView_id_1_Big_Image的notification_id_1_Big_Image视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
@@ -290,6 +301,9 @@ public class MainActivity extends Activity {
 
                 Intent action_Dislike=new Intent("Dislike");
                 bigView_id_1_Big_Image.setOnClickPendingIntent(R.id.btnDislike,PendingIntent.getBroadcast(MainActivity.this, 14, action_Dislike,PendingIntent.FLAG_UPDATE_CURRENT));
+
+                Intent action3_id_1_Big_Image2=new Intent("Close");
+                bigView_id_1_Big_Image.setOnClickPendingIntent(R.id.btnClose,PendingIntent.getBroadcast(MainActivity.this, 15, action3_id_1_Big_Image2,PendingIntent.FLAG_UPDATE_CURRENT));
 
                 NotificationManager manager_id_1_Big_Image = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 if (manager_id_1_Big_Image != null) {
@@ -313,6 +327,8 @@ public class MainActivity extends Activity {
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("大图")
                         .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("常驻")
                         .setContent(view_id_0_Big_Image)//设置普通notification_id_0_Big_Image视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
                         .build();
@@ -367,7 +383,9 @@ public class MainActivity extends Activity {
                 Notification notification_id_1_Image_with_Text = new NotificationCompat.Builder(this,"1")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("图文")
-                        .setOngoing(false)
+                        .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("其它")
                         .setContent(view_id_1_Image_with_Text)//设置普通notification视图
                         .setCustomBigContentView(bigView_id_1_Image_with_Text)//设置显示bigView的notification视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
@@ -378,6 +396,10 @@ public class MainActivity extends Activity {
 
                 Intent action2_id_1_Image_with_Text=new Intent("Image_with_Text_Previous");
                 bigView_id_1_Image_with_Text.setOnClickPendingIntent(R.id.btnPrevious,PendingIntent.getBroadcast(MainActivity.this, 16, action2_id_1_Image_with_Text,PendingIntent.FLAG_UPDATE_CURRENT));
+
+                Intent action3_id_1_Image_with_Text=new Intent("Close");
+                bigView_id_1_Image_with_Text.setOnClickPendingIntent(R.id.btnClose,PendingIntent.getBroadcast(MainActivity.this, 17, action3_id_1_Image_with_Text,PendingIntent.FLAG_UPDATE_CURRENT));
+
                 action_Like=new Intent("Like");
                 action_Dislike=new Intent("Dislike");
                 bigView_id_1_Image_with_Text.setOnClickPendingIntent(R.id.btnLike,PendingIntent.getBroadcast(MainActivity.this, 13, action_Like,PendingIntent.FLAG_UPDATE_CURRENT));
@@ -404,6 +426,8 @@ public class MainActivity extends Activity {
                 Notification notification_id_0_Image_with_Text = new NotificationCompat.Builder(this,"0")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("图文")
+                        .setGroupSummary(false)
+                        .setGroup("常驻")
                         .setOngoing(true)
                         .setContent(view_id_0_Image_with_Text)//设置普通notification_id_0_Image_with_Text视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
@@ -440,14 +464,25 @@ public class MainActivity extends Activity {
                 RemoteViews view_id_1_Favourite = new RemoteViews(getPackageName(), R.layout.normal_down);
                 RemoteViews bigView_id_1_Favourite = new RemoteViews(getPackageName(), R.layout.activity_favourite);
 
+                bigView_id_1_Favourite.setImageViewResource(R.id.Favourite_ImageView, R.drawable.favourite_aqy);
+
+
                 Notification notification_id_1_Favourite = new NotificationCompat.Builder(this,"1")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("收藏")
-                        .setOngoing(false)
-                        .setContent(view_id_1_Favourite)//设置普通notification视图
+                        .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("其它1")
+                        .setContentTitle("爱奇艺")
+                        .setContentText("你和我的倾城时光")
+                  //      .setContent(view_id_1_Favourite)//设置普通notification视图
                         .setCustomBigContentView(bigView_id_1_Favourite)//设置显示bigView的notification视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
                         .build();
+
+                Intent action1_id_1_Favourite=new Intent("Close");
+                bigView_id_1_Favourite.setOnClickPendingIntent(R.id.btnClose,PendingIntent.getBroadcast(MainActivity.this, 11, action1_id_1_Favourite,PendingIntent.FLAG_UPDATE_CURRENT));
+
 
                 NotificationManager manager_id_1_Favourite = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 if (manager_id_1_Favourite != null) {
@@ -465,10 +500,101 @@ public class MainActivity extends Activity {
                     view_id_0_Favourite.setImageViewResource(R.id.Normal_Icon, R.drawable.icon);
                 }
 
+// **************************************************************************************************************
+// *********************************以下代码为展示用收藏界面的重复通知*********************************************
+                NotificationChannel noti_id_1_Favourite2 = new NotificationChannel("2",
+                        "收藏", NotificationManager.IMPORTANCE_HIGH);
+                manger.createNotificationChannel(noti_id_1_Favourite2);
+                RemoteViews view_id_1_Favourite2 = new RemoteViews(getPackageName(), R.layout.normal_down);
+                RemoteViews bigView_id_1_Favourite2 = new RemoteViews(getPackageName(), R.layout.activity_favourite);
+
+                bigView_id_1_Favourite2.setImageViewResource(R.id.Favourite_ImageView, R.drawable.favourite_wyy);
+
+                Notification notification_id_1_Favourite2 = new NotificationCompat.Builder(this,"2")
+                        .setSmallIcon(R.drawable.icon)
+                        .setTicker("收藏")
+                        .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("其它2")
+                        .setContentTitle("网易有道词典")
+                        .setContentText("《雅思单词》")
+                   //     .setContent(view_id_1_Favourite2)//设置普通notification视图
+                        .setCustomBigContentView(bigView_id_1_Favourite2)//设置显示bigView的notification视图
+                        .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
+                        .build();
+
+                Intent action1_id_1_Favourite2=new Intent("Close");
+                bigView_id_1_Favourite2.setOnClickPendingIntent(R.id.btnClose,PendingIntent.getBroadcast(MainActivity.this, 12, action1_id_1_Favourite2,PendingIntent.FLAG_UPDATE_CURRENT));
+
+
+                NotificationManager manager_id_1_Favourite2 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                if (manager_id_1_Favourite2 != null) {
+                    manager_id_1_Favourite2.notify(2, notification_id_1_Favourite2);
+                }
+
+                NotificationChannel noti_id_1_Favourite3 = new NotificationChannel("3",
+                        "收藏", NotificationManager.IMPORTANCE_HIGH);
+                manger.createNotificationChannel(noti_id_1_Favourite3);
+                RemoteViews view_id_1_Favourite3 = new RemoteViews(getPackageName(), R.layout.normal_down);
+                RemoteViews bigView_id_1_Favourite3 = new RemoteViews(getPackageName(), R.layout.activity_favourite);
+
+                bigView_id_1_Favourite3.setImageViewResource(R.id.Favourite_ImageView, R.drawable.favourite);
+
+                Notification notification_id_1_Favourite3 = new NotificationCompat.Builder(this,"3")
+                        .setSmallIcon(R.drawable.icon)
+                        .setTicker("收藏")
+                        .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("其它3")
+                        .setContentTitle("知乎")
+                        .setContentText("哪些气质猥琐的动物？")
+                   //     .setContent(view_id_1_Favourite3)//设置普通notification视图
+                        .setCustomBigContentView(bigView_id_1_Favourite3)//设置显示bigView的notification视图
+                        .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
+                        .build();
+
+                Intent action1_id_1_Favourite3=new Intent("Close");
+                bigView_id_1_Favourite3.setOnClickPendingIntent(R.id.btnClose,PendingIntent.getBroadcast(MainActivity.this, 13, action1_id_1_Favourite3,PendingIntent.FLAG_UPDATE_CURRENT));
+
+
+                NotificationManager manager_id_1_Favourite3 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                if (manager_id_1_Favourite3 != null) {
+                    manager_id_1_Favourite3.notify(3, notification_id_1_Favourite3);
+                }
+
+
+                NotificationChannel noti_id_1_Favourite4 = new NotificationChannel("4",
+                        "收藏", NotificationManager.IMPORTANCE_HIGH);
+                manger.createNotificationChannel(noti_id_1_Favourite4);
+                RemoteViews view_id_1_Favourite4 = new RemoteViews(getPackageName(), R.layout.activity_favourite_search);
+                RemoteViews bigView_id_1_Favourite4 = new RemoteViews(getPackageName(), R.layout.activity_favourite);
+
+                bigView_id_1_Favourite4.setImageViewResource(R.id.Favourite_ImageView, R.drawable.favourite);
+
+                Notification notification_id_1_Favourite4 = new NotificationCompat.Builder(this,"4")
+                        .setSmallIcon(R.drawable.icon)
+                        .setTicker("收藏")
+                        .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("其它4")
+                        .setContent(view_id_1_Favourite4)//设置普通notification视图
+                       // .setCustomBigContentView(bigView_id_1_Favourite4)//设置显示bigView的notification视图
+                        .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
+                        .build();
+
+                NotificationManager manager_id_1_Favourite4 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                if (manager_id_1_Favourite4 != null) {
+                    manager_id_1_Favourite4.notify(4, notification_id_1_Favourite4);
+                }
+// *********************************以上代码为展示用收藏界面的重复通知*********************************************
+// **************************************************************************************************************
+
                 Notification notification_id_0_Favourite = new NotificationCompat.Builder(this,"0")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("收藏")
                         .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("常驻")
                         .setContent(view_id_0_Favourite)//设置普通notification_id_0_Image_with_Text视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
                         .build();
@@ -507,11 +633,17 @@ public class MainActivity extends Activity {
                 Notification notification_id_1_Game = new NotificationCompat.Builder(this,"1")
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("游戏")
-                        .setOngoing(false)
+                        .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("其它")
                         .setContent(view_id_1_Game)//设置普通notification视图
                         .setCustomBigContentView(bigView_id_1_Game)//设置显示bigView的notification视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
                         .build();
+
+                Intent action1_id_1_Game=new Intent("Close");
+                bigView_id_1_Game.setOnClickPendingIntent(R.id.btnClose,PendingIntent.getBroadcast(MainActivity.this, 11, action1_id_1_Game,PendingIntent.FLAG_UPDATE_CURRENT));
+
 
                 NotificationManager manager_id_1_Game = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 if (manager_id_1_Game != null) {
@@ -534,6 +666,8 @@ public class MainActivity extends Activity {
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("游戏")
                         .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("常驻")
                         .setContent(view_id_0_Game)//设置普通notification_id_0_Game视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
                         .build();
@@ -573,10 +707,16 @@ public class MainActivity extends Activity {
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("放松")
                         .setOngoing(false)
+                        .setGroupSummary(false)
+                        .setGroup("其它")
                         .setContent(view_id_1_Relax)//设置普通notification视图
                         .setCustomBigContentView(bigView_id_1_Relax)//设置显示bigView的notification视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
                         .build();
+
+                Intent action1_id_1_Relax=new Intent("Close");
+                bigView_id_1_Relax.setOnClickPendingIntent(R.id.btnClose,PendingIntent.getBroadcast(MainActivity.this, 11, action1_id_1_Relax,PendingIntent.FLAG_UPDATE_CURRENT));
+
 
                 NotificationManager manager_id_1_Relax = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 if (manager_id_1_Relax != null) {
@@ -598,6 +738,8 @@ public class MainActivity extends Activity {
                         .setSmallIcon(R.drawable.icon)
                         .setTicker("游戏")
                         .setOngoing(true)
+                        .setGroupSummary(false)
+                        .setGroup("常驻")
                         .setContent(view_id_0_Relax)//设置普通notification_id_0_Relax视图
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置最大优先级
                         .build();
@@ -790,6 +932,18 @@ public class MainActivity extends Activity {
             sendNotification(Initial_Notification);
         }
 
+    }
+
+    class MyBroadCast7 extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent)
+        {
+            manger.cancel(1);
+            manger.cancel(2);
+            manger.cancel(3);
+            manger.cancel(4);
+        }
     }
 
     void dealTextMessage(Intent intent){
