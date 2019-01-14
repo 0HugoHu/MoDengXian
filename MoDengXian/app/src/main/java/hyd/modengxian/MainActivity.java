@@ -567,9 +567,6 @@ public class MainActivity extends Activity {
                         "收藏", NotificationManager.IMPORTANCE_HIGH);
                 manger.createNotificationChannel(noti_id_1_Favourite4);
                 RemoteViews view_id_1_Favourite4 = new RemoteViews(getPackageName(), R.layout.activity_favourite_search);
-                RemoteViews bigView_id_1_Favourite4 = new RemoteViews(getPackageName(), R.layout.activity_favourite);
-
-                bigView_id_1_Favourite4.setImageViewResource(R.id.Favourite_ImageView, R.drawable.favourite);
 
                 Notification notification_id_1_Favourite4 = new NotificationCompat.Builder(this,"4")
                         .setSmallIcon(R.drawable.icon)
@@ -935,7 +932,6 @@ public class MainActivity extends Activity {
     }
 
     class MyBroadCast7 extends BroadcastReceiver{
-
         @Override
         public void onReceive(Context context, Intent intent)
         {
@@ -949,8 +945,6 @@ public class MainActivity extends Activity {
     void dealTextMessage(Intent intent){
         String share = intent.getStringExtra(Intent.EXTRA_TEXT);
         String title = intent.getStringExtra(Intent.EXTRA_TITLE);
-
-
     }
 
     void dealPicStream(Intent intent){

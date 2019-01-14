@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="50dp">
 
     <ImageView
         android:id="@+id/Favourite_ImageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/favourite" />
+        android:layout_height="50dp"
+        android:background="@drawable/favourite_search" />
 </LinearLayout>

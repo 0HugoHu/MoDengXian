@@ -100,7 +100,8 @@ public class MyAccessibilityService extends AccessibilityService {
         if (node ==null) {
 
         }else {
-            a = node.getText() + "";
+            for(int i=12;i<21;i=i+2)
+            a = a+node.getChild(i).getText() + "\n";
             if(!a.equals("null"))
             handler = new Handler(Looper.getMainLooper());
             handler.post(new Runnable() {

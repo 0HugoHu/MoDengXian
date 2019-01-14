@@ -9,7 +9,7 @@
         android:id="@+id/Favourite_ImageView"
         android:layout_height="wrap_content"
         />
-
+<!--
     <ImageView
         android:id="@+id/btnClose"
         android:layout_width="25dp"
@@ -18,5 +18,5 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="7dp"
         android:background="@drawable/cross" />
-
+-->
 </RelativeLayout>
