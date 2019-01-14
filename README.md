@@ -139,6 +139,7 @@
 
 	Dev：
     1.通过设置setGroupSummary(false)禁止系统合并通知
+    2.通知内容页面添加关闭按钮
 
 	Debug：
     1.
