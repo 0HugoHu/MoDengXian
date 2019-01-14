@@ -17,7 +17,7 @@
 > 4、市场无竞争，未来前景广阔，商业收益高。
 > 
 > Read pieces of news while waiting for the ads, relax your mind while loading the app data.  
->  All you need is to merely slide down the notification bar. Say **GOOD BYE** to the ads and **NEVER** wait when there is no network!
+>  All you need is to merely slide down the notification bar. Say **GOOD BYE** to the ads and **NEVER** wait when there is no net!
 
 ***
 <div align=center>
