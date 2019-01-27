@@ -172,3 +172,13 @@
     3.a=b+a，则插入内容在原a的前面
     4.Toast在handler中需包围在Looper.prepare()和Looper.loop()中使用
 
+***
+| 2019 01 27 | Version d6.0 | Code: 13 |
+|--|--|--|
+
+	Dev：
+    1.增加了ProgressBar动画
+    2.打开“莫等闲助手”时自动清除上次已下载内容
+
+	Debug：
+    1.
