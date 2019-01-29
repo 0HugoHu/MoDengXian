@@ -206,4 +206,13 @@
     1.系统级代码优先于后台代码运行
     2.findviewbyId只能绑定显示的view的控件，若是dialog的自定义视图的控件，则需view.findviewbyId
     3.leancloud通过file方式无法上传文件？
-    4.
+ 
+ ***
+| 2019 01 29 | Version d7.1 | Code: 15 |
+|--|--|--|
+
+	Dev：
+    1.修复了若干小bug
+
+	Debug：
+    1.List的add方法即便明确index也不能实现替换，替换为set方法
