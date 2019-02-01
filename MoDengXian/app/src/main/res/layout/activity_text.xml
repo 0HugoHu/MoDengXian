@@ -37,18 +37,29 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/Text_Img"
+        android:layout_below="@id/Text_SubTitle"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/Text_Img"
         android:layout_marginRight="10dp"
         android:id="@+id/Text_Content"/>
+
+    <TextView
+        android:id="@+id/Text_Content2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignStart="@+id/Text_Img"
+        android:layout_below="@+id/Text_Img"
+        android:text="这很有可能是意大利人里皮最后一场执教中国队的比赛。银狐在2016年10月牵手中国男足，在2018年俄罗斯世界杯预选赛上带给了危急中的中国队以希望。" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/Text_Img"
+        android:layout_below="@id/Text_Content2"
         android:orientation="horizontal">
 
         <ImageButton
@@ -109,5 +120,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="7dp"
         android:background="@drawable/cross" />
+
+
 
 </RelativeLayout>
