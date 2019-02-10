@@ -14,49 +14,37 @@
         android:layout_marginRight="32dp"
         android:adjustViewBounds="true"
         android:maxHeight="25dp"
+        android:text="爱国豆腐干那你搞摩斯"
         android:textSize="16sp" />
 
     <TextView
+        android:id="@+id/Text_SubTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxHeight="20dp"
         android:layout_below="@id/Text_Title"
         android:layout_alignLeft="@id/Text_Title"
-        android:textColor="#FF616161"
-        android:id="@+id/Text_SubTitle"/>
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
         android:adjustViewBounds="true"
-        android:maxHeight="100dp"
-        android:maxWidth="100dp"
-        android:layout_below="@id/Text_SubTitle"
-        android:layout_alignLeft="@id/Text_Title"
-        android:layout_marginTop="10dp"
-        android:id="@+id/Text_Img"
-        android:src="@drawable/a1"/>
+        android:maxHeight="20dp"
+        android:text="奥斯迪广安而过"
+        android:textColor="#FF616161" />
 
     <TextView
+        android:id="@+id/Text_Content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/Text_SubTitle"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_toRightOf="@id/Text_Img"
         android:layout_marginRight="10dp"
-        android:id="@+id/Text_Content"/>
+        android:text="阿二哥啊贵哦你搜诶饿哦啊rigid方面公司" />
 
     <TextView
         android:id="@+id/Text_Content2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/Text_Content"
+        android:layout_alignStart="@+id/Text_Content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_alignStart="@+id/Text_Img"
-        android:layout_below="@+id/Text_Img"
-        android:text="这很有可能是意大利人里皮最后一场执教中国队的比赛。银狐在2016年10月牵手中国男足，在2018年俄罗斯世界杯预选赛上带给了危急中的中国队以希望。" />
+        android:text="爱人各大佛ing色日哦地没发过" />
 
     <RelativeLayout
         android:layout_width="match_parent"
