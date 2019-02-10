@@ -2,7 +2,6 @@ package hyd.modengxian;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -10,7 +9,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ClipData;
-import android.content.ClipDescription;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
@@ -20,37 +18,46 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NotificationCompat;
-import android.text.TextUtils;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Base64;
 import android.util.Log;
-import android.view.WindowManager;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceResponse;
-import android.webkit.WebSettings;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
+import android.widget.ImageButton;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ashokvarma.bottomnavigation.BottomNavigationBar;
+import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
-import com.avos.avoscloud.GetCallback;
-import com.tencent.sonic.sdk.SonicConfig;
-import com.tencent.sonic.sdk.SonicEngine;
 import com.tencent.sonic.sdk.SonicSession;
-import com.tencent.sonic.sdk.SonicSessionConfig;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -69,12 +76,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 
+import hyd.modengxian.fragment.fragment_functions;
+import hyd.modengxian.fragment.fragment_home;
+import hyd.modengxian.fragment.fragment_settings;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private NotificationManager manger;
 
@@ -93,6 +104,52 @@ public class MainActivity extends Activity {
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
 
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener= new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            fragmentManager = getSupportFragmentManager();
+            final Fragment[] fragment = {null};
+            final String[] tag = new String[1];
+            //新建一个fragment事务来进行处理
+            final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    tag[0] = ONE;
+                    if ((fragment[0] = findFragment(tag[0])) == null) {
+                        fragment[0] = new fragment_home();
+                        fragmentTransaction.add(R.id.content_frame, fragment[0], tag[0]);
+                    }
+                    break;
+                case R.id.navigation_functions:
+                    tag[0] = TWO;
+                    if ((fragment[0] = findFragment(tag[0])) == null) {
+                        fragment[0] =new fragment_functions();
+                        fragmentTransaction.add(R.id.content_frame, fragment[0], tag[0]);
+                    }
+                    break;
+                case R.id.navigation_settings:
+                    tag[0] = THREE;
+                    if ((fragment[0] = findFragment(tag[0])) == null) {
+                        fragment[0] = new fragment_settings();
+                        fragmentTransaction.add(R.id.content_frame, fragment[0], tag[0]);
+                    }
+                    break;
+            }
+            for (Fragment fragment1 : fragmentManager.getFragments()) {
+                if (fragment[0] == fragment1) {
+                    fragmentTransaction.show(fragment1);
+                } else {
+                    fragmentTransaction.hide(fragment1);
+                }
+            }
+
+            //提交事务
+            fragmentTransaction.commitAllowingStateLoss();
+            return true;
+        }
+    };
+
     private String[] TxtTitleList;
     private String[] TxtSubtitleList;
     private String[] TxtContentList;
@@ -103,8 +160,6 @@ public class MainActivity extends Activity {
     private String[] VocYinbiaoList;
     private String[] VocMeanList;
 
-    private int[] TxtImg={R.drawable.a0,R.drawable.a1,R.drawable.a2,R.drawable.a3,R.drawable.a4,R.drawable.a5};
-    private int[] ImgImg={R.drawable.b0,R.drawable.b1,R.drawable.b2,R.drawable.b3,R.drawable.b4,R.drawable.b5,R.drawable.b6};
 
 //i：大图  j：图文  k：
     private int i=0,j=0,k=0;
@@ -113,7 +168,6 @@ public class MainActivity extends Activity {
     private Boolean Tag_Isbigimg = false;
     private Boolean Tag_onAccessibilityService=true;
     private Boolean Tag_isTextwithImg = false;
-
 
     private SharedPreferences sp ;
     private String url;
@@ -146,6 +200,12 @@ public class MainActivity extends Activity {
     private int NewsReadLocation=0;
     private boolean alwaysUpdateData=false;//每次启动始终更新内容
 
+
+    private FragmentManager fragmentManager;
+    private final String ONE = "one";
+    private final String TWO = "two";
+    private final String THREE = "three";
+
     private TextView UpdateText;
 
     @Override
@@ -153,7 +213,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//id: 常驻通知栏（0）   一级通知（1）
 
         init();
         broadcast_init();
@@ -168,8 +227,93 @@ public class MainActivity extends Activity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
+
+        } else if (id == R.id.nav_slideshow) {
+
+        } else if (id == R.id.nav_manage) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 
     public void init(){
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        fragmentManager = getSupportFragmentManager();
+        final Fragment[] fragment = {null};
+        final String[] tag = new String[1];
+        //新建一个fragment事务来进行处理
+        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragment[0] = new fragment_home();
+        fragmentTransaction.add(R.id.content_frame, fragment[0], tag[0]);
+        for (Fragment fragment1 : fragmentManager.getFragments()) {
+            if (fragment[0] == fragment1) {
+                fragmentTransaction.show(fragment1);
+            } else {
+                fragmentTransaction.hide(fragment1);
+            }
+        }
+        fragmentTransaction.commitAllowingStateLoss();
+
 
         manger = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
@@ -357,7 +501,7 @@ public class MainActivity extends Activity {
 
                 bigView_id_1_Big_Image.setTextViewText(R.id.Image_Title, ImgTitleList[i]);
                 bigView_id_1_Big_Image.setTextViewText(R.id.Image_SubTitle, ImgSubtitleList[i]);
-                bigView_id_1_Big_Image.setImageViewResource(R.id.Image_Img,ImgImg[i]);
+                //bigView_id_1_Big_Image.setImageViewResource(R.id.Image_Img,ImgImg[i]);
                 RemoteViews view_id_1_Big_Image = new RemoteViews(getPackageName(), R.layout.normal_down);
                 Notification notification_id_1_Big_Image = new NotificationCompat.Builder(this,"1")
                         .setSmallIcon(R.drawable.icon)
@@ -1231,6 +1375,10 @@ public class MainActivity extends Activity {
 
         return newList;
     }
+    private Fragment findFragment(String tag) {
+        Fragment fragment = fragmentManager.findFragmentByTag(tag);
+        return fragment;
+    }
 
 
     //工具类
@@ -1413,8 +1561,6 @@ public class MainActivity extends Activity {
     }
 
     public void test(){
-        webView=findViewById(R.id.activity_main_WebView);
-
         ClipboardManager clipboardManager = (ClipboardManager) this.getSystemService(Context.CLIPBOARD_SERVICE);
         /* 判断剪切版时候有内容 */
         if (clipboardManager != null && clipboardManager.hasPrimaryClip()) {
@@ -1422,11 +1568,6 @@ public class MainActivity extends Activity {
             url= clipData.getItemAt(0).getText().toString();
         }
 
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
     }
 
     @Override

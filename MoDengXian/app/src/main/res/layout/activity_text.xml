@@ -35,8 +35,7 @@
         android:layout_below="@id/Text_SubTitle"
         android:layout_alignLeft="@id/Text_Title"
         android:layout_marginTop="10dp"
-        android:id="@+id/Text_Img"
-        android:src="@drawable/a1"/>
+        android:id="@+id/Text_Img"/>
 
     <TextView
         android:layout_width="match_parent"

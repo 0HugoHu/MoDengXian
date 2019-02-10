@@ -1,6 +1,6 @@
 <resources>
     <string name="btn1_description">Start foreground service</string>
-    <string name="btn1_title" >Start</string>
+    <string name="btn1_title">Start</string>
     <string name="simple_service_title">Simple Service</string>
     <string name="simple_service_desc">Simple Service from the OTest app</string>
     <string name="app_name">莫等闲</string>
@@ -34,7 +34,6 @@
     <string name="main_title_reading">阅读</string>
     <string name="main_title_favourite">收藏</string>
     <string name="main_title_relax">放松</string>
-
 
 
     <string-array name="newstitle">
@@ -120,4 +119,14 @@
 
 
     <string name="txt_divide0">-------微信-------</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">功能</string>
+    <string name="title_notifications">设置</string>
 </resources>
