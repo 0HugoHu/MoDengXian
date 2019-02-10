@@ -221,3 +221,13 @@
 	Debug：
     1.List的add方法即便明确index也不能实现替换，替换为set方法
     2.java的Number变量可通过.intValue()直接获取数值，强行转int值会出错
+
+ ***
+| 2019 02 10 | Version d8.0 | Code: 16 |
+|--|--|--|
+
+	Dev：
+    1.实现检查内容更新，并将更新内容保存到本地
+
+	Debug：
+    1.
