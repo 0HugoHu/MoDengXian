@@ -3,6 +3,7 @@ package hyd.modengxian;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -15,16 +16,22 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -34,6 +41,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -44,19 +52,20 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ashokvarma.bottomnavigation.BottomNavigationBar;
-import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
+import com.bilibili.magicasakura.utils.ThemeUtils;
 import com.tencent.sonic.sdk.SonicSession;
 
 import java.io.BufferedOutputStream;
@@ -78,14 +87,18 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
+import hyd.modengxian.dialog.CardPickerDialog;
 import hyd.modengxian.fragment.fragment_functions;
 import hyd.modengxian.fragment.fragment_home;
 import hyd.modengxian.fragment.fragment_settings;
+import hyd.modengxian.utils.BottomNavigationViewHelper;
+import hyd.modengxian.utils.ThemeHelper;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ThemeUtils.switchColor, CardPickerDialog.ClickListener {
 
     private NotificationManager manger;
 
@@ -104,6 +117,7 @@ public class MainActivity extends AppCompatActivity
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
 
+    private BottomNavigationView bottomNavigationView;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener= new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -207,15 +221,18 @@ public class MainActivity extends AppCompatActivity
     private final String THREE = "three";
 
     private TextView UpdateText;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        ThemeUtils.setSwitchColor(this);
 
         init();
         broadcast_init();
+        setNavigationBarColor();
+
         try {
             checkUpdateData();
         } catch (ParseException e) {
@@ -225,6 +242,22 @@ public class MainActivity extends AppCompatActivity
         reloadData();
         test();
 
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        if (toolbar != null)
+            toolbar.setTitle("");
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(ThemeUtils.getColorById(this, R.color.theme_color_primary_dark));
+            ActivityManager.TaskDescription description = new ActivityManager.TaskDescription(null, null,
+                    ThemeUtils.getThemeAttrColor(this, android.R.attr.colorPrimary));
+            setTaskDescription(description);
+        }
     }
 
     @Override
@@ -253,6 +286,9 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            CardPickerDialog dialog = new CardPickerDialog();
+            dialog.setClickListener( this);
+            dialog.show(getSupportFragmentManager(), CardPickerDialog.TAG);
             return true;
         }
 
@@ -284,8 +320,65 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    public int replaceColorById(Context context, @ColorRes int colorId) {
+        if (ThemeHelper.isDefaultTheme(context)) {
+            return context.getResources().getColor(colorId,null);
+        }
+        String theme = getTheme(context);
+        if (theme != null) {
+            colorId = getThemeColorId(context, colorId, theme);
+        }
+        return context.getResources().getColor(colorId,null);
+    }
+
+    @Override
+    public int replaceColor(Context context, @ColorInt int originColor) {
+        if (ThemeHelper.isDefaultTheme(context)) {
+            return originColor;
+        }
+        String theme = getTheme(context);
+        int colorId = -1;
+
+        if (theme != null) {
+            colorId = getThemeColor(context, originColor, theme);
+        }
+        return colorId != -1 ? getResources().getColor(colorId,null) : originColor;
+    }
+
+    @Override
+    public void onConfirm(int currentTheme) {
+        if (ThemeHelper.getTheme(MainActivity.this) != currentTheme) {
+            ThemeHelper.setTheme(MainActivity.this, currentTheme);
+            ThemeUtils.refreshUI(MainActivity.this, new ThemeUtils.ExtraRefreshable() {
+                        @Override
+                        public void refreshGlobal(Activity activity) {
+                            //for global setting, just do once
+                            if (Build.VERSION.SDK_INT >= 21) {
+                                final MainActivity context = MainActivity.this;
+                                ActivityManager.TaskDescription taskDescription =
+                                        new ActivityManager.TaskDescription(null, null,
+                                                ThemeUtils.getThemeAttrColor(context, android.R.attr.colorPrimary));
+                                setTaskDescription(taskDescription);
+                                getWindow().setStatusBarColor(
+                                        ThemeUtils.getColorById(context, R.color.theme_color_primary_dark));
+
+                            }
+                            setNavigationBarColor();
+                        }
+
+                        @Override
+                        public void refreshSpecificView(View view) {
+                            //TODO: will do this for each traversal
+                        }
+                    }
+            );
+
+        }
+    }
+
     public void init(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -314,13 +407,33 @@ public class MainActivity extends AppCompatActivity
         }
         fragmentTransaction.commitAllowingStateLoss();
 
+        ThemeUtils.refreshUI(MainActivity.this, new ThemeUtils.ExtraRefreshable() {
+                    @Override
+                    public void refreshGlobal(Activity activity) {
+                        //for global setting, just do once
+                        if (Build.VERSION.SDK_INT >= 21) {
+                            final MainActivity context = MainActivity.this;
+                            ActivityManager.TaskDescription taskDescription =
+                                    new ActivityManager.TaskDescription(null, null,
+                                            ThemeUtils.getThemeAttrColor(context, android.R.attr.colorPrimary));
+                            setTaskDescription(taskDescription);
+                            getWindow().setStatusBarColor(
+                                    ThemeUtils.getColorById(context, R.color.theme_color_primary_dark));
+
+                        }
+                    }
+
+                    @Override
+                    public void refreshSpecificView(View view) {
+                        //TODO: will do this for each traversal
+                    }
+                });
+
+        bottomNavigationView=findViewById(R.id.navigation);
 
         manger = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
         Resources resources =getResources();
-        TxtTitleList=resources.getStringArray(R.array.newstitle);
-        TxtSubtitleList=resources.getStringArray(R.array.newssubtitle);
-        TxtContentList=resources.getStringArray(R.array.newscontent);
 
         ImgTitleList=resources.getStringArray(R.array.imgtitle);
         ImgSubtitleList=resources.getStringArray(R.array.imgsubtitle);
@@ -1139,7 +1252,10 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
-//image next
+
+
+
+    //image next
     class MyBroadCast extends BroadcastReceiver{
 
         @Override
@@ -1378,6 +1494,84 @@ public class MainActivity extends AppCompatActivity
     private Fragment findFragment(String tag) {
         Fragment fragment = fragmentManager.findFragmentByTag(tag);
         return fragment;
+    }
+    private String getTheme(Context context) {
+        if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_STORM) {
+            return "blue";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_HOPE) {
+            return "purple";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_WOOD) {
+            return "green";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_LIGHT) {
+            return "green_light";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_THUNDER) {
+            return "yellow";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_SAND) {
+            return "orange";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_FIREY) {
+            return "red";
+        }
+        return null;
+    }
+    private @ColorRes int getThemeColorId(Context context, int colorId, String theme) {
+        switch (colorId) {
+            case R.color.theme_color_primary:
+                return context.getResources().getIdentifier(theme, "color", getPackageName());
+            case R.color.theme_color_primary_dark:
+                return context.getResources().getIdentifier(theme + "_dark", "color", getPackageName());
+            case R.color.theme_color_primary_trans:
+                return context.getResources().getIdentifier(theme + "_trans", "color", getPackageName());
+        }
+        return colorId;
+    }
+    private @ColorRes int getThemeColor(Context context, int color, String theme) {
+        switch (color) {
+            case 0xfffb7299:
+                return context.getResources().getIdentifier(theme, "color", getPackageName());
+            case 0xffb85671:
+                return context.getResources().getIdentifier(theme + "_dark", "color", getPackageName());
+            case 0x99f0486c:
+                return context.getResources().getIdentifier(theme + "_trans", "color", getPackageName());
+        }
+        return -1;
+    }
+    public void setNavigationBarColor(){
+        BottomNavigationViewHelper.setImageSize(bottomNavigationView,60,60);
+        int theme_color=ThemeHelper.getTheme(this);
+        switch (theme_color){
+            case 0x1:
+                bottomNavigationView.setItemIconTintList(this.getColorStateList(R.color.selector_tink_pink));
+                bottomNavigationView.setItemTextColor(this.getColorStateList(R.color.selector_tink_pink));
+                break;
+            case 0x2:
+                bottomNavigationView.setItemIconTintList(this.getColorStateList(R.color.selector_tink_purple));
+                bottomNavigationView.setItemTextColor(this.getColorStateList(R.color.selector_tink_purple));
+                break;
+            case 0x3:
+                bottomNavigationView.setItemIconTintList(this.getColorStateList(R.color.selector_tink_blue));
+                bottomNavigationView.setItemTextColor(this.getColorStateList(R.color.selector_tink_blue));
+                break;
+            case 0x4:
+                bottomNavigationView.setItemIconTintList(this.getColorStateList(R.color.selector_tink_green));
+                bottomNavigationView.setItemTextColor(this.getColorStateList(R.color.selector_tink_green));
+                break;
+            case 0x5:
+                bottomNavigationView.setItemIconTintList(this.getColorStateList(R.color.selector_tink_green_light));
+                bottomNavigationView.setItemTextColor(this.getColorStateList(R.color.selector_tink_green_light));
+                break;
+            case 0x6:
+                bottomNavigationView.setItemIconTintList(this.getColorStateList(R.color.selector_tink_yellow));
+                bottomNavigationView.setItemTextColor(this.getColorStateList(R.color.selector_tink_yellow));
+                break;
+            case 0x7:
+                bottomNavigationView.setItemIconTintList(this.getColorStateList(R.color.selector_tink_orange));
+                bottomNavigationView.setItemTextColor(this.getColorStateList(R.color.selector_tink_orange));
+                break;
+            case 0x8:
+                bottomNavigationView.setItemIconTintList(this.getColorStateList(R.color.selector_tink_red));
+                bottomNavigationView.setItemTextColor(this.getColorStateList(R.color.selector_tink_red));
+                break;
+        }
     }
 
 

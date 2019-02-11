@@ -36,32 +36,6 @@
     <string name="main_title_relax">放松</string>
 
 
-    <string-array name="newstitle">
-        <item>华为加拿大副总裁宣布离职 </item>
-        <item>全球最大飞机近首飞，搭载三枚火箭</item>
-        <item>雷军跳脚，小米不是民族骄傲？</item>
-        <item>美国政府机构关门22天，破最长记录</item>
-        <item>ofo 行将就木还是浴火重生？</item>
-        <item>哈登三节打卡，火箭复仇骑士</item>
-    </string-array>
-
-    <string-array name="newssubtitle">
-        <item>第一财经 1月12日</item>
-        <item>国防科技报 1月12日</item>
-        <item>智谷趋势</item>
-        <item>大国军事</item>
-        <item>杨德龙宏观策略研究所</item>
-        <item>头条体育</item>
-    </string-array>
-
-    <string-array name="newscontent">
-        <item>1月11日，华为加拿大公司高级副总裁布拉德利（Scott Bradley）在社交媒体宣布辞职。不过他表示这 " 并非一个突然举措 "，而且将按照华为团队的要求，继续为公司提供咨询服务。</item>
-        <item>美国“太空新闻”网站1月10日报道，由平流层发射系统公司开发的“平流层发射”巨型双身飞机正在接近它的第一次飞行。在进行的高速滑行测试中，这架世界上最大的飞机达到了118节的最大速度，并尝试让机头抬离地面。</item>
-        <item>雷军一改往日“Are you OK？”的忠厚老实形象，在红米品牌独立和Redmi Note7的发布会上连放“狠话”，口出狂言，宛若一个愤世嫉俗的江湖游侠。</item>
-        <item>11日午夜过后，美国政府部分机构关闭便进入第22天，打破了美国史上政府关门21天的最长记录。目前总统特朗普与国会民主党人就修建边境墙的分歧，还未达成，政府重开无望，除非特朗普宣布国家进入紧急状态。</item>
-        <item>临近年终，媒体纷纷发布年度热搜榜单，而榜单中一个名字很难让人忽视，那就是ofo。它的出现掀起资本圈热潮，让共享单车成为有史以来崛起速度最快的互联网赛道。如今ofo以近崩盘的方式跌入溃败边缘，着实让人唏嘘。</item>
-        <item>1月12日，休斯顿火箭队主场对阵克利夫兰骑士队。比赛第一节火箭队就掀起进攻潮，单节砍下42分完胜骑士队，而整场比赛火箭队也没有给骑士队追分的机会，最终球队更是砍下141分的高分，以141&#8211;113击败骑士队。</item>
-    </string-array>
 
     <string-array name="imgtitle">
         <item>英国伊丽莎白女王</item>
@@ -129,4 +103,11 @@
     <string name="title_home">主页</string>
     <string name="title_dashboard">功能</string>
     <string name="title_notifications">设置</string>
+
+    <string name="cancel">cancel</string>
+    <string name="confirm">ok</string>
+    <string name="textview_title_unlock">Lock Setting</string>
+    <string name="textview_click_before">You can unlock it to open the new world !</string>
+    <string name="textview_click_after">Go to : https://github.com/Bilibili/MagicaSakura</string>
+
 </resources>

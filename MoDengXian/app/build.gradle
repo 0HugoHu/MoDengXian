@@ -34,6 +34,5 @@ dependencies {
     // 推送与即时通讯需要的包
     implementation('cn.leancloud.android:avoscloud-push:4.7.9@aar') { transitive = true }
 
-    implementation 'com.ashokvarma.android:bottom-navigation-bar:1.4.1'
-
+    implementation 'com.bilibili:magicasakura:0.1.9-beta3@aar'
 }
