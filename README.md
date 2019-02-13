@@ -258,6 +258,19 @@
 
 	Dev：
     1.toolbar适配主题变色
+    2.添加设置界面布局
+    3.优化交互逻辑
 
 	Debug：
-    1.
+    1.RecyclerView无法在fragment中添加数据？（使用Listview代替）
+    
+ ***
+| 2019 02 13 | Version d10.0 | Code: 19 |
+|--|--|--|
+
+	Dev：
+    1.添加选择主题Activity及布局
+    2.优化交互逻辑
+
+	Debug：
+    1.返回MainActivity时加载设置的fragment仍会显示首页fragment？（设置fragment非透明背景直接覆盖）
