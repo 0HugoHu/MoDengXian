@@ -271,6 +271,8 @@
 	Dev：
     1.添加选择主题Activity及布局
     2.优化交互逻辑
+    3.新增选择主题并查看主题界面
+    4.添加两款主题
 
 	Debug：
     1.返回MainActivity时加载设置的fragment仍会显示首页fragment？（设置fragment非透明背景直接覆盖）
