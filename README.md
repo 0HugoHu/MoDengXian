@@ -276,3 +276,14 @@
 
 	Debug：
     1.返回MainActivity时加载设置的fragment仍会显示首页fragment？（设置fragment非透明背景直接覆盖）
+    
+ ***
+| 2019 02 15 | Version d10.1 | Code: 20 |
+|--|--|--|
+
+	Dev：
+    1.添加应用至快捷开关后台启动
+    2.隐藏应用后台活动
+
+	Debug：
+    1.隐式启动被启动activity必须注册intent-category属性
