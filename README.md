@@ -287,3 +287,16 @@
 
 	Debug：
     1.隐式启动被启动activity必须注册intent-category属性
+    
+ ***
+| 2019 02 16 | Version d11.0 | Code: 21 |
+|--|--|--|
+
+	Dev：
+    1.MainActivity通知部分代码重构，缩减75%代码量
+    2.为用户自定义显示功能的显示通知方法、数据库做好准备
+    3.设置-通知，可手动关闭通知提醒声音或应用中手机静音
+    4.完成ListView中带Switch的实现
+
+	Debug：
+    1.ListView中嵌套Switch会自动屏蔽item焦点，设置Switch不可点击不可获得焦点以实现item的点击效果
