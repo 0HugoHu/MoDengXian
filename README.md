@@ -300,3 +300,26 @@
 
 	Debug：
     1.ListView中嵌套Switch会自动屏蔽item焦点，设置Switch不可点击不可获得焦点以实现item的点击效果
+    
+ ***
+| 2019 02 19 | Version d12.0 | Code: 22 |
+|--|--|--|
+
+	Dev：
+    1.完成首页BannerBar功能（展示图片和文字）
+    2.实现自定义通知栏显示功能
+
+	Debug：
+    1.调用其他activity的必须是statistic方法
+    2.statistic变量无法修改
+    
+ ***
+| 2019 02 20 | Version d12.1 | Code: 23 |
+|--|--|--|
+
+	Dev：
+    1.设置加入还原布局及其它功能
+    2.热搜功能已实现
+
+	Debug：
+    1.
