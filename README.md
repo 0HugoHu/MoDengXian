@@ -319,7 +319,18 @@
 
 	Dev：
     1.设置加入还原布局及其它功能
-    2.热搜功能已实现
+    2.“莫等闲助手”已可以获取百度热搜和微博热搜的内容
 
+ ***
+| 2019 02 25 | Version d13.0 | Code: 24 |
+|--|--|--|
+
+	Dev：
+    1.完成热搜界面显示布局
+    2.实现热搜功能
+    
 	Debug：
-    1.
+    1.RemoteView中setImageViewResource的资源参数只需输入R.color.xxx，不能通过getResource...获取
+    2.安卓8.0以上需动态权限开启悬浮窗
+    3.RemoteView不支持ConstraitLayout
+
