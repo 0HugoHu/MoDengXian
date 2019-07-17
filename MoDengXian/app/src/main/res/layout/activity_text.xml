@@ -2,8 +2,47 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:Android="http://schemas.android.com/tools">
 
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:tint="@color/gray"
+        android:layout_marginEnd="7dp"
+        android:background="@null"
+        android:rotation="-90"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_notify_expand" />
+
+
+    <ImageButton
+        android:id="@+id/btnPrevious"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="7dp"
+        android:tint="@color/gray"
+        android:layout_toLeftOf="@+id/btnNext"
+        android:background="@null"
+        android:layout_marginEnd="10dp"
+        android:rotation="90"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_notify_expand" />
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_toLeftOf="@+id/btnPrevious"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/cross" />
 
     <TextView
         android:id="@+id/Text_Title"
@@ -11,118 +50,67 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="32dp"
+        android:layout_toStartOf="@+id/btnClose"
         android:adjustViewBounds="true"
-        android:maxHeight="25dp"
+        android:maxLines="2"
         android:textSize="16sp" />
 
     <TextView
+        android:id="@+id/Text_SubTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxHeight="20dp"
         android:layout_below="@id/Text_Title"
         android:layout_alignLeft="@id/Text_Title"
-        android:textColor="#FF616161"
-        android:id="@+id/Text_SubTitle"/>
+        android:adjustViewBounds="true"
+        android:maxLines="1"
+        android:textColor="#FF616161" />
 
     <ImageView
+        android:id="@+id/Text_Img"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:adjustViewBounds="true"
-        android:maxHeight="100dp"
-        android:maxWidth="100dp"
         android:layout_below="@id/Text_SubTitle"
         android:layout_alignLeft="@id/Text_Title"
         android:layout_marginTop="10dp"
-        android:id="@+id/Text_Img"/>
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp" />
 
     <TextView
+        android:id="@+id/Text_Content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_below="@id/Text_SubTitle"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_toRightOf="@id/Text_Img"
-        android:layout_marginRight="10dp"
-        android:id="@+id/Text_Content"/>
+        android:maxLines="6"
+
+        Android:ellipsize="end"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/Text_Img" />
 
     <TextView
         android:id="@+id/Text_Content2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_alignStart="@+id/Text_Img"
         android:layout_below="@+id/Text_Img"
-        android:text="这很有可能是意大利人里皮最后一场执教中国队的比赛。银狐在2016年10月牵手中国男足，在2018年俄罗斯世界杯预选赛上带给了危急中的中国队以希望。" />
+        android:layout_alignStart="@+id/Text_Img"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+
+
+    <TextView
+        android:id="@+id/load_more"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_below="@id/Text_Content2"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:layout_marginEnd="50dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginBottom="10dp"
-            android:layout_alignParentRight="true"
-            android:id="@+id/btnNext"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/next"/>
-
-
-        <ImageButton
-            android:layout_marginEnd="50dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginBottom="10dp"
-            android:background="@null"
-            android:layout_toLeftOf="@+id/btnNext"
-            android:id="@+id/btnLike"
-            android:scaleType="fitCenter"
-            android:src="@drawable/like"/>
-
-
-        <ImageButton
-            android:layout_marginEnd="50dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/btnDislike"
-            android:layout_toLeftOf="@+id/btnLike"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/dislike"/>
-
-
-        <ImageButton
-            android:layout_marginEnd="50dp"
-            android:layout_width="25dp"
-            android:layout_marginBottom="10dp"
-            android:layout_height="25dp"
-            android:id="@+id/btnPrevious"
-            android:layout_toLeftOf="@+id/btnDislike"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/previous"/>
-
-
-    </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/btnClose"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="7dp"
-        android:background="@drawable/cross" />
-
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Text_Content"
+        android:textColor="@color/purple"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:text="了解详情..." />
 
 
 </RelativeLayout>

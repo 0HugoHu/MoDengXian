@@ -18,51 +18,47 @@
 
 
     <TextView
+        android:id="@+id/Normal_1"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
+        android:layout_marginLeft="30dp"
         android:layout_toRightOf="@id/Normal_Icon"
-        android:text="背单词"
         android:clickable="true"
-        android:textColor="#424242"
         android:gravity="center"
-        android:textSize="15sp"
-        android:id="@+id/Normal_Game"
-        android:layout_marginLeft="30dp"/>
+        android:textColor="#424242"
+        android:textSize="15sp" />
 
 
     <TextView
+        android:id="@+id/Normal_2"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@id/Normal_1"
         android:clickable="true"
-        android:textSize="15sp"
+        android:gravity="center"
         android:textColor="#424242"
-        android:layout_toRightOf="@id/Normal_Game"
-        android:text="阅读"
-        android:id="@+id/Normal_Reading"
-        android:layout_marginLeft="35dp"/>
+        android:textSize="15sp" />
 
     <TextView
+        android:id="@+id/Normal_3"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@id/Normal_2"
         android:clickable="true"
-        android:textSize="15sp"
-        android:layout_toRightOf="@id/Normal_Reading"
-        android:text="收藏"
+        android:gravity="center"
         android:textColor="#424242"
-        android:id="@+id/Normal_Favourite"
-        android:layout_marginLeft="35dp"/>
+        android:textSize="15sp" />
 
     <TextView
+        android:id="@+id/Normal_4"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:gravity="center"
-        android:textSize="15sp"
-        android:layout_toRightOf="@id/Normal_Favourite"
-        android:text="放松"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@id/Normal_3"
         android:clickable="true"
+        android:gravity="center"
         android:textColor="#424242"
-        android:id="@+id/Normal_Relax"
-        android:layout_marginLeft="35dp"/>
+        android:textSize="15sp" />
 </RelativeLayout>

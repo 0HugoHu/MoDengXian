@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="264dp">
+
+
+
+    <TextView
+        android:id="@+id/hotsearch_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="微博热搜："
+        android:textColor="@color/text_primary_color"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/hotsearch_numbercolor1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/hotsearch_title"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@color/number_1" />
+
+    <TextView
+        android:id="@+id/hotsearch_number1"
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/hotsearch_numbercolor1"
+        android:layout_alignBottom="@id/hotsearch_numbercolor1"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="1dp"
+        android:text="1"
+        android:textColor="@color/real_white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/hotsearch_numbercolor2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/hotsearch_numbercolor1"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/number_2" />
+
+    <TextView
+        android:id="@+id/hotsearch_number2"
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/hotsearch_numbercolor2"
+        android:layout_alignBottom="@id/hotsearch_numbercolor2"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="1dp"
+        android:text="2"
+        android:textColor="@color/real_white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/hotsearch_numbercolor3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/hotsearch_numbercolor2"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/number_3" />
+
+    <TextView
+        android:id="@+id/hotsearch_number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_alignStart="@id/hotsearch_numbercolor3"
+        android:layout_alignBottom="@id/hotsearch_numbercolor3"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="1dp"
+        android:text="3"
+        android:textColor="@color/real_white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/hotsearch_numbercolor4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/hotsearch_numbercolor3"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/number_4" />
+
+    <TextView
+        android:id="@+id/hotsearch_number4"
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/hotsearch_numbercolor4"
+        android:layout_alignBottom="@id/hotsearch_numbercolor4"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="1dp"
+        android:text="4"
+        android:textColor="@color/real_white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/hotsearch_numbercolor5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/hotsearch_numbercolor4"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/number_4" />
+
+    <TextView
+        android:id="@+id/hotsearch_number5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_alignStart="@id/hotsearch_numbercolor5"
+        android:layout_alignBottom="@id/hotsearch_numbercolor5"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="1dp"
+        android:clickable="true"
+        android:text="5"
+        android:textColor="@color/real_white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/hotsearch_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/hotsearch_numbercolor1"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@id/hotsearch_numbercolor1"
+        android:text="14岁少年被撞身亡"
+        android:textColor="@color/text_primary_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/hotsearch_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/hotsearch_numbercolor2"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@id/hotsearch_numbercolor2"
+        android:text="当事医生回应狗舔伤口致男童死亡 "
+        android:textColor="@color/text_primary_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/hotsearch_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/hotsearch_numbercolor3"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@id/hotsearch_numbercolor3"
+        android:text="爸妈眼里的网友 我认识的网友 "
+        android:textColor="@color/text_primary_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/hotsearch_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/hotsearch_numbercolor4"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@id/hotsearch_numbercolor4"
+        android:text="国乒最严考核标准"
+        android:textColor="@color/text_primary_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/hotsearch_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/hotsearch_numbercolor5"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@id/hotsearch_numbercolor5"
+        android:text="安倍早前惊人言论"
+        android:textColor="@color/text_primary_color"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@null"
+        android:rotation="-90"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_notify_expand"
+        android:tint="@color/gray" />
+
+
+    <ImageButton
+        android:id="@+id/btnPrevious"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toLeftOf="@+id/btnNext"
+        android:background="@null"
+        android:rotation="90"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_notify_expand"
+        android:tint="@color/gray" />
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toLeftOf="@+id/btnPrevious"
+        android:background="@drawable/cross"
+        android:visibility="gone" />
+</RelativeLayout>
