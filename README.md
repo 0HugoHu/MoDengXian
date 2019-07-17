@@ -231,8 +231,106 @@
     2.拓展纯文本显示界面
     3.实现在通知栏阅读每日新闻
     4.“莫等闲助手”小错误的修复
-    5.添加应用主界面
+    5.添加应用主界面（抽屉布局和导航栏布局）
 
 	Debug：
     1.leancloud按照日期删除数据时会将最早创建的排序为第一个
     2.误用英文逗号导致无法按照逗号分隔文段
+    3.导航栏fragment切换非放在@Override前无法监听点击？
+    
+ ***
+| 2019 02 11 | Version d9.0 | Code: 17 |
+|--|--|--|
+
+	Dev：
+    1.实现应用更换主题（应用哔哩哔哩开源库）
+    2.适配抽屉页和底部导航栏主题更换
+
+	Debug：
+    1.安卓原生底部导航栏不提供某些自定义调整接口，需重写名称变量
+    2.应用第三方抽屉页后，toolbar不支持自动变主题色？
+    3.无法实现抽屉页覆盖于状态栏？
+    
+    
+ ***
+| 2019 02 12 | Version d9.1 | Code: 18 |
+|--|--|--|
+
+	Dev：
+    1.toolbar适配主题变色
+    2.添加设置界面布局
+    3.优化交互逻辑
+
+	Debug：
+    1.RecyclerView无法在fragment中添加数据？（使用Listview代替）
+    
+ ***
+| 2019 02 13 | Version d10.0 | Code: 19 |
+|--|--|--|
+
+	Dev：
+    1.添加选择主题Activity及布局
+    2.优化交互逻辑
+    3.新增选择主题并查看主题界面
+    4.添加两款主题
+
+	Debug：
+    1.返回MainActivity时加载设置的fragment仍会显示首页fragment？（设置fragment非透明背景直接覆盖）
+    
+ ***
+| 2019 02 15 | Version d10.1 | Code: 20 |
+|--|--|--|
+
+	Dev：
+    1.添加应用至快捷开关后台启动
+    2.隐藏应用后台活动
+
+	Debug：
+    1.隐式启动被启动activity必须注册intent-category属性
+    
+ ***
+| 2019 02 16 | Version d11.0 | Code: 21 |
+|--|--|--|
+
+	Dev：
+    1.MainActivity通知部分代码重构，缩减75%代码量
+    2.为用户自定义显示功能的显示通知方法、数据库做好准备
+    3.设置-通知，可手动关闭通知提醒声音或应用中手机静音
+    4.完成ListView中带Switch的实现
+
+	Debug：
+    1.ListView中嵌套Switch会自动屏蔽item焦点，设置Switch不可点击不可获得焦点以实现item的点击效果
+    
+ ***
+| 2019 02 19 | Version d12.0 | Code: 22 |
+|--|--|--|
+
+	Dev：
+    1.完成首页BannerBar功能（展示图片和文字）
+    2.实现自定义通知栏显示功能
+
+	Debug：
+    1.调用其他activity的必须是statistic方法
+    2.statistic变量无法修改
+    
+ ***
+| 2019 02 20 | Version d12.1 | Code: 23 |
+|--|--|--|
+
+	Dev：
+    1.设置加入还原布局及其它功能
+    2.“莫等闲助手”已可以获取百度热搜和微博热搜的内容
+
+ ***
+| 2019 02 25 | Version d13.0 | Code: 24 |
+|--|--|--|
+
+	Dev：
+    1.完成热搜界面显示布局
+    2.实现热搜功能
+    
+	Debug：
+    1.RemoteView中setImageViewResource的资源参数只需输入R.color.xxx，不能通过getResource...获取
+    2.安卓8.0以上需动态权限开启悬浮窗
+    3.RemoteView不支持ConstraitLayout
+
