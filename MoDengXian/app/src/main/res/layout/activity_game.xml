@@ -23,7 +23,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="197dp"
-        android:src="@drawable/c0"
         android:layout_alignParentBottom="true"
         android:id="@+id/Game_Image"/>
 

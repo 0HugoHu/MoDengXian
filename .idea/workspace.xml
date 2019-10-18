@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
@@ -7,49 +12,256 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f62296-6f09-40fa-95f4-69215752b849" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/notification_progressbar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/androidTest/java/com/tencent/sonic/sdk/BaseSonicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/androidTest/java/com/tencent/sonic/sdk/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/androidTest/java/com/tencent/sonic/sdk/QuickSonicSessionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/androidTest/java/com/tencent/sonic/sdk/SonicRuntimeImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/androidTest/java/com/tencent/sonic/sdk/SonicSessionClientImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/androidTest/java/com/tencent/sonic/sdk/SonicTestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/QuickSonicSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicCacheInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicDBHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicDataHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicDiffDataCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicFileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicResourceDataHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicRuntime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSessionCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSessionClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSessionConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSessionConnectionInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSessionStatistics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSessionStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSessionThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicSniSSLSocketFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/SonicUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/StandardSonicSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/download/SonicDownloadCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/download/SonicDownloadCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/download/SonicDownloadClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/java/com/tencent/sonic/sdk/download/SonicDownloadEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoDengXian/sdk/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/LoginActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/SharedIntent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/advance/AdvanceSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/data/DataServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/entity/MultipleItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/entity/MySection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/entity/NormalMultipleEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/entity/SectionMultiEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/entity/SectionMultipleItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/entity/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/entity/Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_advance_settings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_normal_settings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_theme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/normal/NormalSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/notification/NotificationSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/service/FloatingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/service/FloatingService_Favourite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/service/FloatingService_Plain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/service/FloatingService_Sliding_Puzzle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/service/MyTileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/service/SaveService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/service/ScreenshotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/theme/ChooseTheme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/theme/ShowTheme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/BaseSectionMultiItemQuickAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/DensityUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/DirectoryHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/EventCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/FaviconFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/GridViewAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/LinkMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/LinkMain2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/MultipleItemQuickAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/MyPagerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/MySettingListViewAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/MySettingListViewAdapter2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/NotificationTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/PageSaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/SectionMultipleItemAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/widget/CustomLinearLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/widget/TagView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_action_action_search.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_action_navigation_arrow_back_inverted.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_action_navigation_close_inverted.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_action_voice_search_inverted.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_dot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_dot_current.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_feedback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_help.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_notify_discard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_notify_expand.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_notify_retry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_notify_save.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_about.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_advice.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_developer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_donate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_help.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_lab.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_normalsettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_notification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_recommend.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_setting_theme.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_shop.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/ic_statistic.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-anydpi/small.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_action_action_search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_action_navigation_arrow_back_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_action_navigation_close_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_action_voice_search_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_dot_current.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_notify_discard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_notify_expand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_notify_retry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_notify_save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_advice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_developer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_donate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_lab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_normalsettings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_recommend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_setting_theme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_shop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/ic_statistic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-hdpi/small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_action_action_search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_action_navigation_arrow_back_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_action_navigation_close_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_action_voice_search_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_dot_current.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_notify_discard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_notify_expand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_notify_retry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_notify_save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_advice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_developer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_donate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_lab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_normalsettings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_recommend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_setting_theme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_shop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/ic_statistic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-mdpi/small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_action_action_search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_action_navigation_arrow_back_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_action_navigation_close_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_action_voice_search_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_dot_current.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_notify_discard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_notify_expand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_notify_retry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_notify_save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_advice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_developer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_donate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_lab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_normalsettings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_recommend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_setting_theme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_shop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/ic_statistic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xhdpi/small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_action_action_search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_action_navigation_arrow_back_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_action_navigation_close_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_action_voice_search_inverted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_dot_current.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_notify_discard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_notify_expand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_notify_retry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_notify_save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_advice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_developer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_donate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_lab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_normalsettings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_recommend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_setting_theme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_shop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/ic_statistic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable-xxhdpi/small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/home_round_title.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/ic_forcestop.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/list_item_divider.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/list_item_divider2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/round_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/round_card.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/round_card_green.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/round_grey_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/s_grid_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/selector_icon_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/tag_first4_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/tag_others_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/tool_bar_shadow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_hotsearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_login_vertification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_shared_intent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/banner_viewpager.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/def_section_head.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/floating_window.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/floating_window_favourite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/floating_window_hide.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/floating_window_plain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/floating_window_sliding_puzzle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_choosetheme.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_common.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_notification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/notification_setting_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/setting_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/show_theme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MoDengXian.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MoDengXian.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoDengXian/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/ic_launcher-web.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/MyAccessibilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/service/MyAccessibilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/OpenAccessibilitySettingHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/utils/OpenAccessibilitySettingHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_home.java" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/color/selector_tink_pink.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/color/selector_tink_pink.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/drawable/c0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_game.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_onlytext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_onlytext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_text.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_text.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_fuctions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_fuctions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_down.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_down.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_favourite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_reading.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_relax.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/menu/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/menu/main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/menu/navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/menu/navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/selector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/app/src/main/res/xml/accessibility_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/app/src/main/res/xml/accessibility_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoDengXian/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MoDengXian/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,44 +269,41 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-346250893">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_text.xml">
+        <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="129">
+              <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_settings.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_home.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="xml" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,11 +313,26 @@
     <option name="width" value="915" />
     <option name="height" value="1080" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MoDengXian" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MoDengXian" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,88 +345,28 @@
               <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
               <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
             <path>
-              <item name="MoDengXian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoDengXian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoDengXian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoDengXian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoDengXian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hyd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoDengXian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hyd" type="462c0819:PsiDirectoryNode" />
-              <item name="modengxian" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoDengXian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoDengXian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="MoDengXian" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="MoDengXian" type="1abcf292:AndroidViewProjectNode" />
+              <item name="MoDengXian" type="e9137016:NonAndroidModuleNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="D:/Program Files/SDK" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/MoDengXian" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -227,7 +391,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -250,15 +415,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1486" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2570028" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25938338" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info id="Captures" order="3" weight="0.25" />
+      <window_info id="Captures" order="3" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
+      <window_info id="Build Variants" order="7" side_tool="true" />
+      <window_info id="DB Browser" order="8" weight="0.32983193" />
+      <window_info id="Resources Explorer" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -267,8 +436,12 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" visible="true" weight="0.32707775" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Logcat" order="10" />
+      <window_info anchor="bottom" id="Android Profiler" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="DB Execution Console" order="12" />
+      <window_info anchor="bottom" id="Statistic" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -276,22 +449,82 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Preview" order="6" />
+      <window_info anchor="right" id="Device File Explorer" order="7" side_tool="true" />
+      <window_info anchor="right" id="Assistant" order="8" weight="0.3297587" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_text.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_hotsearch.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_favourite.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_game.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_favourite_search.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/activity_relax.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/normal_1.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2307">
+          <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/java/hyd/modengxian/fragment/fragment_settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_settings.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoDengXian/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

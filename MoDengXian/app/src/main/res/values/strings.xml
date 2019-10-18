@@ -36,7 +36,6 @@
     <string name="main_title_relax">放松</string>
 
 
-
     <string-array name="imgtitle">
         <item>英国伊丽莎白女王</item>
         <item>5G即将到来</item>
@@ -44,6 +43,20 @@
         <item>意境之禅</item>
         <item>我喜欢现在的自己，我怀念过去的我们</item>
         <item>最美的河——漓江</item>
+    </string-array>
+
+    <string-array name="function_instruction">
+        <item>新闻：在此板块，您可以浏览每日热点新闻，点击“查看更多”以悬浮窗形式查看全文。</item>
+        <item>历史上的今天：在此板块，您可以发觉今天的节日（如果有），查看历史上同一天发生的重大事件，纪念这一天出生于逝世的名人/伟人。</item>
+        <item>收藏：通过此功能，您可以便捷的在任何时刻查阅所有形式的收藏，不需要切换应用，您可以直接查阅其内容。</item>
+        <item>冥想：累了，烦了？来一起做一下冥想放松吧！</item>
+        <item>游戏：感觉无事可做？来一局一分钟的小游戏吧！游戏虽小，但足够挑战自己，试试每次获取更好的成绩吧！</item>
+        <item>图片：不想看文字，只想放松放松？来欣赏一些壮阔的摄影作品吧！</item>
+        <item>轻小说：想不到吧，在通知栏也可以看轻小说了。充分运用你的零碎时间吧！</item>
+        <item>热搜：在这里，您可以查看实时的新浪微博和百度搜索热搜，点击可进入话题浏览相关信息。</item>
+        <item>轻松一刻：在这里看一些笑话、段子吧。</item>
+        <item>备忘录：突然有一些奇思妙想？临时要记录一些重要的备忘？快运用此功能记录下来吧，我们会自动识别其中含有的日期来提示你。</item>
+        <item>敬请期待：更多功能，敬请期待......</item>
     </string-array>
 
     <string-array name="imgsubtitle">
@@ -101,8 +114,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_home">主页</string>
-    <string name="title_dashboard">功能</string>
-    <string name="title_notifications">设置</string>
+    <string name="title_dashboard">收藏</string>
+    <string name="title_notifications">我的</string>
 
     <string name="cancel">cancel</string>
     <string name="confirm">ok</string>
@@ -110,4 +123,23 @@
     <string name="textview_click_before">You can unlock it to open the new world !</string>
     <string name="textview_click_after">Go to : https://github.com/Bilibili/MagicaSakura</string>
 
+
+    <string name="account_balance">Account Balance</string>
+    <string name="balance_currency">$</string>
+    <string name="balance_amount">524.99</string>
+
+    <string name="tag_circle_ratio">10dp</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>

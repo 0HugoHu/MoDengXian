@@ -10,29 +10,46 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true">
 
-        <com.bilibili.magicasakura.widgets.TintToolbar
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:elevation="1dp"
+            style="@style/MaterialSearchViewStyle"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             style="@style/Widget.App.Toolbar"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="@color/theme_color_primary"
-            app:elevation="4dp">
+            android:layout_height="45dp"
+            app:theme="@style/toolbar_theme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/pink"
+            app:elevation="0dp">
 
             <TextView
+                android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/real_white"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/text_primary_color"
                 android:textSize="20sp" />
 
-        </com.bilibili.magicasakura.widgets.TintToolbar>
 
-        </FrameLayout>
+        </android.support.v7.widget.Toolbar>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/toolbar"
+                android:background="@drawable/tool_bar_shadow">
+            </View>
 
     <include layout="@layout/content_main" />
 
@@ -42,9 +59,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/pink"
         android:layout_alignParentBottom="true"
         app:menu="@menu/navigation" />
+
 
 
     </RelativeLayout>
