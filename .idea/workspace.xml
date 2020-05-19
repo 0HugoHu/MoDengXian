@@ -313,6 +313,7 @@
     <option name="width" value="915" />
     <option name="height" value="1080" />
   </component>
+  <component name="ProjectId" id="1c8896blgbnglbtXQfZ6RCiN7iP" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -364,7 +365,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="android.sdk.path" value="D:/Program Files/SDK" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../Program Files/SDK" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/MoDengXian" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
