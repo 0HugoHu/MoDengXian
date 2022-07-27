@@ -1,36 +1,33 @@
-<div align=center> 
-	
-# 莫等闲 MoDengXian
+# MoDengXian
+A Fragment Time Utilization and Collection Management Android App.
 
-## `项目简介 Intro`
+# Notice
+This App was developed during **2019 winter** when I was a freshman in university. The technology used in the project is inevitably outdated. The server has stopped renewing, so the oneline service including daily news, hot search, or log in is no longer functioning properly.
 
-<div align=left> 
-	
-> **社会价值：** 解决了用户必须观看视频前漫长广告的问题，缓解了网络不佳时用户等待应用数据加载的焦虑。填充零碎时间，助力高效生活。
-> 
-> **项目介绍：** 一款构建在通知栏的工具类APP。下滑通知栏，便可阅读每日趣闻、背几个单词、做些缓解放松，甚至浏览以前各大应用收藏的内容！
-> 
-> **项目优势：**   
-> 1、团队设计出了完整的产品交互demo。  
-> 2、想法独一无二，下拉通知栏不必担心广告暂停播放、应用正常加载。  
-> 3、汇集所有应用收藏于一处，有网时自动缓存，随时随地均可便捷浏览。   
-> 4、市场无竞争，未来前景广阔，商业收益高。
-> 
-> Read pieces of news while waiting for the ads, relax your mind while loading the app data.  
->  All you need is to merely slide down the notification bar. Say **GOOD BYE** to the ads and **NEVER** wait when there is no network!
+# Introduction
 
-***
-<div align=center>
-	
-## `图片展示 Picture`
+MoDengXian (莫等闲) diagnosed pain points include anxiety when network is poor in metro, time wasted for too long video ads, and never reviewed content collections, and a plethora of small features were developed to creatively address people's needs.
 
-[![FO75hF.md.jpg](https://s2.ax1x.com/2019/01/10/FO75hF.md.jpg)](https://imgchr.com/i/FO75hF)
+Utilized web crawler to get daily information and hot searches, cached data offline, and implemented content browsing and gaming functions with notification bar and hover window.
 
-***
-## `开发日志 Dev-Log`
+**Won Hewlett-Packard Entrepreneurship Competition 2nd Place Nationwide.**
+
+# Preview
+
+|  |  |  |
+|--|--|--|
+|![](https://s1.ax1x.com/2022/07/27/vShPfI.jpg)|![](https://s1.ax1x.com/2022/07/27/vShCtA.jpg)|![](https://s1.ax1x.com/2022/07/27/vShSTH.jpg)|
+![](https://s1.ax1x.com/2022/07/27/vSh9kd.jpg)|![](https://s1.ax1x.com/2022/07/27/vSfz0e.jpg)|![](https://s1.ax1x.com/2022/07/27/vShFpt.jpg)|
+![](https://s1.ax1x.com/2022/07/27/vShk1P.jpg)|![](https://s1.ax1x.com/2022/07/27/vShA6f.jpg)|![](https://s1.ax1x.com/2022/07/27/vShEX8.jpg)|
+![](https://s1.ax1x.com/2022/07/27/vShZnS.jpg)|![](https://s1.ax1x.com/2022/07/27/vShe0g.jpg)|![](https://s1.ax1x.com/2022/07/27/vShm7Q.jpg)|
+![](https://s1.ax1x.com/2022/07/27/vShukj.jpg)|![](https://s1.ax1x.com/2022/07/27/vShMhn.jpg)|![](https://s1.ax1x.com/2022/07/27/vShKts.jpg)|
+
+
+# Development
 
 <div align=left> 
 
+***
 | 2018 12 06 | Version d1.0 | Code: 1 |
 |--|--|--|
 
