@@ -23,7 +23,8 @@ Utilized web crawler to get daily information and hot searches, cached data offl
 ![](https://s1.ax1x.com/2022/07/27/vShukj.jpg)|![](https://s1.ax1x.com/2022/07/27/vShMhn.jpg)|![](https://s1.ax1x.com/2022/07/27/vShKts.jpg)|
 
 
-# Development
+
+# Development Log
 
 <div align=left> 
 
