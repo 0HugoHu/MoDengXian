@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/home_main"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="52dp"
+    android:background="@color/gray_background">
+
+
+    <LinearLayout
+        android:id="@+id/home_cardview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </android.support.v4.view.ViewPager>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/home_main"
+        android:background="@drawable/tool_bar_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/home_cardview2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:foreground="?android:attr/selectableItemBackground"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/home_cardview1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_cardview1">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/real_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:columnCount="4">
+
+                <TextView
+                    android:id="@+id/Normal_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_first4_circle"
+                    android:gravity="center"
+                    android:textColor="#424242"
+                    android:textSize="15sp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <TextView
+                    android:id="@+id/Normal_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_first4_circle"
+                    android:gravity="center"
+                    android:textColor="#424242"
+
+                    android:textSize="15sp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <TextView
+                    android:id="@+id/Normal_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_first4_circle"
+                    android:gravity="center"
+                    android:textColor="#424242"
+
+                    android:textSize="15sp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <TextView
+                    android:id="@+id/Normal_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_first4_circle"
+                    android:gravity="center"
+                    android:textColor="#424242"
+
+                    android:textSize="15sp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+            </android.support.v7.widget.GridLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/home_cardview3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/pink"
+        app:layout_constraintBottom_toBottomOf="@+id/home_cardview1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_cardview2">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/home_expand"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/gray"
+                android:background="@drawable/ic_notify_expand"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/out_layout"
+                app:layout_constraintStart_toStartOf="@+id/out_layout" />
+
+
+
+            <hyd.modengxian.widget.CustomLinearLayout
+                android:id="@+id/out_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0083CC39"
+                android:clipChildren="false"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/home_move_txt"
+                    android:text="拖动排序，前4项在通知栏显示"
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp"
+                    android:layout_height="wrap_content" />
+
+
+                <com.huxq17.handygridview.HandyGridView
+                    android:id="@+id/grid_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/pink"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:horizontalSpacing="30dp"
+                    android:numColumns="4"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="30dp"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="20dp" />
+
+
+
+                <TextView
+                    android:id="@+id/text_enable_selector"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/s_grid_item"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="selector已关闭"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_change_mode"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/s_grid_item"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_add_tag"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/s_grid_item"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="添加标签"
+                        android:visibility="gone" />
+
+
+                    <Button
+                        android:id="@+id/text_recovery_tag"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/s_grid_item"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="复原"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+
+            </hyd.modengxian.widget.CustomLinearLayout>
+
+            <TextView
+                android:id="@+id/home_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="点击确定修改"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/home_expand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/out_layout" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/home_cardview4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/pink"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_cardview3">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <HorizontalScrollView
+                android:id="@+id/home_rela_ti_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/home_ti1"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ti1" />
+
+                    <ImageView
+                        android:id="@+id/home_ti2"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/home_ti1"
+                        app:srcCompat="@drawable/ti2" />
+
+                    <ImageView
+                        android:id="@+id/home_ti3"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/home_ti2"
+                        app:srcCompat="@drawable/ti3" />
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/home_rela_ti_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_rela_ti_1"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/home_ti4"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ti4" />
+
+                    <ImageView
+                        android:id="@+id/home_ti5"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/home_ti4"
+                        app:srcCompat="@drawable/ti5" />
+
+                    <ImageView
+                        android:id="@+id/home_ti6"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/home_ti5"
+                        app:srcCompat="@drawable/ti6" />
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/home_rela_ti_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_rela_ti_2"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/home_ti7"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ti7" />
+
+                    <ImageView
+                        android:id="@+id/home_ti8"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/home_ti7"
+                        app:srcCompat="@drawable/ti8" />
+
+                    <ImageView
+                        android:id="@+id/home_ti9"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/home_ti8"
+                        app:srcCompat="@drawable/ti9" />
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/home_rela_ti_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_rela_ti_3"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/home_ti10"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ti0" />
+
+                    <ImageView
+                        android:id="@+id/home_ti11"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/home_ti10"
+                        app:srcCompat="@drawable/ti10" />
+
+                    <ImageView
+                        android:id="@+id/home_ti12"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toRightOf="@+id/home_ti11"
+                        app:srcCompat="@drawable/ti0" />
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="以上为通知栏显示内容\n点击查看详情"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/home_cardview4"
+        app:layout_constraintStart_toStartOf="@+id/home_cardview4"
+        app:layout_constraintTop_toBottomOf="@+id/home_cardview4" />
+
+    <TextView
+        android:id="@+id/home_line1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:maxLines="1"
+        android:text="                                             "
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/home_cardview4"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/home_line2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLines="1"
+        android:text="                                              "
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/home_cardview4"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+</android.support.constraint.ConstraintLayout>

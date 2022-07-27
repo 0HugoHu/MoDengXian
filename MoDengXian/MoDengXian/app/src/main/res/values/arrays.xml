@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>首页</item>
+        <item>主题</item>
+        <item>帮助</item>
+        <item>反馈</item>
+        <item>设置</item>
+        <item />
+        <item>冻结应用</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/d_home</item>
+        <item>@drawable/d_theme</item>
+        <item>@drawable/d_help</item>
+        <item>@drawable/d_feedback</item>
+        <item>@drawable/d_setting</item>
+        <item>0</item>
+        <item>@drawable/ic_forcestop</item>
+    </array>
+
+    <string-array name="query_suggestions">
+        <item>知乎</item>
+        <item>微信</item>
+        <item>QQ</item>
+        <item>豆瓣</item>
+        <item>微博</item>
+    </string-array>
+
+</resources>

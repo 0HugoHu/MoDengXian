@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Android="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:tint="@color/gray"
+        android:layout_marginEnd="7dp"
+        android:background="@null"
+        android:rotation="-90"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_notify_expand" />
+
+
+    <ImageButton
+        android:id="@+id/btnPrevious"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="7dp"
+        android:tint="@color/gray"
+        android:layout_toLeftOf="@+id/btnNext"
+        android:background="@null"
+        android:layout_marginEnd="10dp"
+        android:rotation="90"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_notify_expand" />
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_toLeftOf="@+id/btnPrevious"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/cross" />
+
+
+    <TextView
+        android:id="@+id/Text_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@+id/btnClose"
+        android:adjustViewBounds="true"
+        android:maxLines="2"
+        android:text="爱国豆腐干那你搞摩斯"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/Text_SubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Text_Title"
+        android:layout_alignLeft="@id/Text_Title"
+        android:adjustViewBounds="true"
+        android:maxLines="1"
+        android:text="奥斯迪广安而过"
+        android:textColor="#FF616161" />
+
+    <TextView
+        android:id="@+id/Text_Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Text_SubTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="7"
+        android:text="阿二哥啊贵哦你搜诶饿哦啊rigid方面公司"
+        Android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/Text_Content2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Text_Content"
+        android:layout_alignStart="@+id/Text_Content"
+        android:layout_marginRight="10dp"
+        android:text="爱人各大佛ing色日哦地没发过"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/butoon_view_rela"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+
+
+        <ImageButton
+            android:id="@+id/btnLike"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:src="@drawable/like" />
+
+
+        <ImageButton
+            android:id="@+id/btnDislike"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dislike" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/load_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Text_Content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:text="了解详情..."
+        android:textColor="@color/purple" />
+
+
+</RelativeLayout>

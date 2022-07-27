@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_text_color">#8a000000</color>
+    <color name="default_text_color_dark">#cc000000</color>
+
+    <color name="white_90">#e6FFFFFF</color>
+    <color name="white_70">#b3FFFFFF</color>
+    <color name="white_60">#9aFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_10">#1AFFFFFF</color>
+    <color name="white_00">#00FFFFFF</color>
+
+    <color name="theme_color_primary">#fb7299</color>
+    <color name="theme_color_primary_dark">#b85671</color>
+    <color name="theme_color_primary_trans">#99f0486c</color>
+    <color name="theme_color_secondary">#fb7299</color>
+
+    <color name="text_primary_color">#393733</color>
+    <color name="window_background">#EAEAEA</color>
+
+    <color name="black_light">#333333</color>
+
+    <color name="real_white">#FFFFFF</color>
+    <color name="white_trans">#99ffffff</color>
+
+    <color name="gray_background">#fafafa</color>
+    <color name="gray_divider">#EEEEEE</color>
+    <color name="gray">#BBBBBB</color>
+    <color name="gray_alpha">#ccBBBBBB</color>
+    <color name="gray_dark">#999999</color>
+    <color name="gray_trans">#44999999</color>
+    <color name="gray_light">#DCDCDC</color>
+
+
+    <color name="red_zhuhong">#ed5126</color>
+
+
+    <!-- theme color -->
+    <color name="pink">#fffefd</color>
+    <color name="pink_dark">#B85671</color>
+    <color name="pink_trans">#99f0486c</color>
+
+    <color name="ivory_white">#F4F4F0</color>
+
+    <color name="blue_doder">#0f95b0</color>
+    <color name="blue">#393733</color>
+    <color name="blue_dark">#1565C0</color>
+    <color name="blue_trans">#B41A78C3</color>
+
+    <color name="purple">#673AB7</color>
+    <color name="purple_dark">#311B92</color>
+    <color name="purple_trans">#99673AB7</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="green_dark">#2E7D32</color>
+    <color name="green_trans">#994CAF50</color>
+
+    <color name="green_light">#8BC34A</color>
+    <color name="green_light_dark">#558B2F</color>
+    <color name="green_light_trans">#998BC34A</color>
+
+    <color name="yellow">#FDD835</color>
+    <color name="yellow_dark">#FBC02D</color>
+    <color name="yellow_trans">#99FDD835</color>
+
+    <color name="orange">#FF9800</color>
+    <color name="orange_dark">#EF6C00</color>
+    <color name="orange_trans">#99FF9800</color>
+
+    <color name="red">#BA2317</color>
+    <color name="red_dark">#C62828</color>
+    <color name="red_trans">#99F44336</color>
+
+    <color name="black">#424242</color>
+    <color name="black_dark">#212121</color>
+    <color name="black_trans">#616161</color>
+    <color name="black_dark_50">#80212121</color>
+
+    <color name="number_1">#F54545</color>
+    <color name="number_2">#fa864b</color>
+    <color name="number_3">#FDAC3D</color>
+    <color name="number_4">#8DBAF3</color>
+
+    <color name="color_light_blue">#00DDB6</color>
+    <color name="txt_color">#48495F</color>
+    <color name="item_bg">@color/pink</color>
+    <color name="bg">#F0F0F0</color>
+    <color name="spinner_bg">#333244</color>
+    <color name="new_text_color">#555771</color>
+    <color name="white_text_color">#F0F0F0</color>
+    <color name="gray_color">#4b4b58</color>
+    <color name="hard_color">#48495f</color>
+    <color name="clickspan_color">#00ddb6</color>
+    <color name="dull_blue">#3B4BBF</color>
+
+
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ivory_white"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Space
+        android:id="@+id/menu_space1"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:layout_constraintEnd_toStartOf="@+id/setting_image_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.android.liuzhuang.rcimageview.CircleImageView
+        android:id="@+id/setting_image_header"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_space1" />
+
+    <TextView
+        android:id="@+id/drawer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="惠普创业沙拉"
+        android:textColor="@color/default_text_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/setting_image_header"
+        app:layout_constraintStart_toStartOf="@+id/setting_image_header"
+        app:layout_constraintTop_toBottomOf="@+id/setting_image_header" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/home_round_title"
+        app:layout_constraintEnd_toEndOf="@+id/setting_image_header"
+        app:layout_constraintStart_toStartOf="@+id/setting_image_header"
+        app:layout_constraintTop_toBottomOf="@+id/drawer_id">
+
+        <TextView
+            android:id="@+id/drawer_ic_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="开通"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIP"
+            android:textColor="@color/red_zhuhong"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/drawer_ic_type"
+            app:layout_constraintStart_toEndOf="@+id/drawer_ic_type"
+            app:layout_constraintTop_toTopOf="@+id/drawer_ic_type" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="会员 >"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/drawer_ic_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView35"
+            app:layout_constraintTop_toTopOf="@+id/drawer_ic_type" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/setting_image_header"
+        app:layout_constraintStart_toStartOf="@+id/setting_image_header"
+        app:layout_constraintTop_toBottomOf="@+id/space2" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list" />
+</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
+</LinearLayout>

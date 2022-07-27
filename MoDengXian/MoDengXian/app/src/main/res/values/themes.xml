@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- for library use when is in night theme-->
+        <item name="themeColorSecondary">@color/theme_color_secondary</item>
+        <item name="android:windowBackground">@color/real_white</item>
+        <item name="android:textColorPrimary">@color/black_light</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppCompat.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:maxWidth">1080px</item>
+    </style>
+
+    <style name="Theme.blue" parent="android:Theme.Material.Light">
+          <item name="android:colorPrimary">#2196F3</item>
+          <item name="android:colorPrimaryDark">#1565C0</item>
+          <item name="android:colorAccent">#B41A78C3</item>
+    </style>
+
+    <style name="Theme.red" parent="android:Theme.Material.Light">
+          <item name="android:colorPrimary">#F44336</item>
+          <item name="android:colorPrimaryDark">#C62828</item>
+          <item name="android:colorAccent">#99F44336</item>
+    </style>
+
+</resources>

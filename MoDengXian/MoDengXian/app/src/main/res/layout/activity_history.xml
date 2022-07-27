@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:tint="@color/gray"
+        android:layout_marginEnd="7dp"
+        android:background="@null"
+        android:rotation="-90"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_notify_expand" />
+
+
+    <ImageButton
+        android:id="@+id/btnPrevious"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="7dp"
+        android:tint="@color/gray"
+        android:layout_toLeftOf="@+id/btnNext"
+        android:background="@null"
+        android:layout_marginEnd="10dp"
+        android:rotation="90"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_notify_expand" />
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_toLeftOf="@+id/btnPrevious"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/cross" />
+
+    <TextView
+        android:id="@+id/History_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@+id/btnClose"
+        android:text="重大事件"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/History_Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/History_Title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:lineSpacingMultiplier="1.4"
+        android:text="这里是内容"
+        android:layout_marginBottom="15dp"
+        android:textSize="14sp" />
+
+
+
+</RelativeLayout>

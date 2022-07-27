@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/setting_image_view"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:tint="@color/gray_alpha"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/setting_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="你好啊这里是设置"
+        android:textColor="@color/text_primary_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_image_view"
+        app:layout_constraintStart_toEndOf="@+id/setting_image_view"
+        app:layout_constraintTop_toTopOf="@+id/setting_image_view" />
+
+    <ImageView
+        android:id="@+id/setting_image_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:rotation="270"
+        app:tint="@color/gray_alpha"
+        app:srcCompat="@drawable/ic_notify_expand"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_image_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/setting_image_view" />
+
+    <TextView
+        android:id="@+id/setting_mark_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="有新更新"
+        android:textColor="@color/default_text_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_image_view"
+        app:layout_constraintEnd_toStartOf="@+id/setting_image_mark"
+        app:layout_constraintTop_toTopOf="@+id/setting_image_view" />
+
+</android.support.constraint.ConstraintLayout>

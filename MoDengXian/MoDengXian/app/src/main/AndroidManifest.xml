@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="hyd.modengxian">
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_desktop"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".SharedIntent"
+            android:label="莫等闲">
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="hyd.modengxian.action.tile" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="莫等闲">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 注册辅助功能服务 -->
+        <service
+            android:name=".service.MyAccessibilityService"
+            android:accessibilityFlags="flagReportViewIds"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/accessibility_tip"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <!-- 通过xml文件完成辅助功能相关配置，也可以在onServiceConnected中动态配置 -->
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_config" />
+        </service>
+        <service
+            android:name=".service.FloatingService"
+            android:label="悬浮框网页"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW" />
+        <service
+            android:name=".service.FloatingService_Sliding_Puzzle"
+            android:label="悬浮框文章"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW" />
+        <service
+            android:name=".service.FloatingService_Dialog"
+            android:label="悬浮框确认"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW" />
+        <service
+            android:name=".service.FloatingService_Plain"
+            android:label="悬浮框文字"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW" />
+        <service
+            android:name=".service.FloatingService_Favourite"
+            android:label="悬浮框收藏"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW" />
+        <service android:name="service.SaveService" />
+        <service android:name="service.ScreenshotService" />
+        <service
+            android:name=".service.MyTileService"
+            android:icon="@drawable/icon_tile"
+            android:label="莫等闲"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:theme="@style/ThemeOverlay.AppCompat.NoActionBar"
+            android:usesCleartextTraffic="true">
+
+        </activity>
+        <activity android:name=".theme.ChooseTheme"
+            android:theme="@style/ThemeOverlay.AppCompat.NoActionBar"/>
+        <activity android:name=".theme.ShowTheme"
+            android:theme="@style/ThemeOverlay.AppCompat.NoActionBar"/>
+        <activity android:name=".notification.NotificationSettings"
+            android:theme="@style/ThemeOverlay.AppCompat.NoActionBar"/>
+        <activity android:name=".normal.NormalSettings"
+            android:theme="@style/ThemeOverlay.AppCompat.NoActionBar"/>
+        <activity android:name=".advance.AdvanceSettings"
+            android:theme="@style/ThemeOverlay.AppCompat.NoActionBar"/>
+
+
+    </application>
+
+</manifest>
