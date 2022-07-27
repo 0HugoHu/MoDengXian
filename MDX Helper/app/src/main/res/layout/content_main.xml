@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <com.white.progressview.CircleProgressView
+        android:id="@+id/progressBar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:progress="0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:progressTextSize="30sp"
+        app:progressTextColor="#F5F5F5"
+        app:progressNormalColor="#90CAF9"
+        app:progressStyle="FillInner"
+        app:radius="70dp" />
+
+    <CheckBox
+    android:id="@+id/checkBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/progressBar"
+    android:layout_marginTop="30dp"
+    android:textSize="20sp"
+    android:text="检查网络环境" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/checkBox"
+        android:textSize="20sp"
+        android:text="下载新闻内容" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/checkBox2"
+        android:textSize="20sp"
+        android:text="压缩文章内容" />
+
+    <CheckBox
+        android:id="@+id/checkBoxx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/checkBox3"
+        android:textSize="20sp"
+        android:text="保存新闻图片" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/checkBoxx"
+        android:textSize="20sp"
+        android:text="裁剪所需图片" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/checkBox4"
+        android:textSize="20sp"
+        android:text="连接至服务器" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/checkBox5"
+        android:textSize="20sp"
+        android:text="内容自检确认" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/checkBox6"
+        android:textSize="20sp"
+        android:text="上传更新数据" />
+
+    <TextView
+        android:id="@+id/textView_updateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="最近更新时间" />
+
+    <TextView
+        android:id="@+id/textView_updateTime_Hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_updateTime"
+        android:layout_centerHorizontal="true"
+        android:text="1月28日21:39" />
+
+
+    <TextView
+        android:id="@+id/textView_Update_Catelogue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_updateTime_Hour"
+        android:layout_centerHorizontal="true"
+
+        android:text="类别：每日Top10" />
+
+    <TextView
+        android:id="@+id/textView_updateId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_Update_Catelogue"
+        android:layout_centerHorizontal="true"
+        android:text="更新人：胡亚东" />
+
+    <TextView
+        android:id="@+id/textView_Version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_updateId"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="莫等闲助手 V0.1.0-build0126" />
+
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/chronometer"/>
+
+
+</RelativeLayout>

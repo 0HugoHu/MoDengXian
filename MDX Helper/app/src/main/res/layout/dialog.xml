@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/InputText1"
+        android:fillViewport="true">
+
+        <com.scrat.app.richtext.RichEditText
+            android:id="@+id/InputText01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="top|start"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:scrollbars="vertical"
+            app:bulletColor="#FF2196F3"
+            app:bulletGapWidth="8dp"
+            app:bulletRadius="2dp"
+            android:textSize="16sp"
+            app:historyEnable="true"
+            app:historySize="99"
+            app:linkColor="#FF2196F3"
+            app:linkUnderline="true"
+            app:quoteCapWidth="2dp"
+            app:quoteColor="#FF2196F3"
+            app:quoteStripeWidth="8dp" />
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/InputText1"
+        android:id="@+id/InputText4"
+        android:fillViewport="true">
+
+        <com.scrat.app.richtext.RichEditText
+            android:id="@+id/InputText04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="top|start"
+            android:textColor="#FF616161"
+            android:paddingEnd="10dp"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:scrollbars="vertical"
+            app:bulletColor="#FF2196F3"
+            app:bulletGapWidth="8dp"
+            app:bulletRadius="2dp"
+            app:historyEnable="true"
+            app:historySize="99"
+            app:linkColor="#FF2196F3"
+            app:linkUnderline="true"
+            app:quoteCapWidth="2dp"
+            app:quoteColor="#FF2196F3"
+            app:quoteStripeWidth="8dp" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/Relativelayout2"
+        android:layout_below="@+id/divider"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="100dp"
+        android:layout_centerVertical="true"
+        android:maxWidth="100dp"
+        android:id="@+id/Text_Img"/>
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/Text_Img"
+        android:id="@+id/InputText2"
+        android:fillViewport="true">
+
+        <com.scrat.app.richtext.RichEditText
+            android:id="@+id/InputText02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="top|start"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            android:paddingStart="10dp"
+            android:scrollbars="vertical"
+            app:bulletColor="#FF2196F3"
+            app:bulletGapWidth="8dp"
+            app:bulletRadius="2dp"
+            app:historyEnable="true"
+            app:historySize="99"
+            app:linkColor="#FF2196F3"
+            app:linkUnderline="true"
+            app:quoteCapWidth="2dp"
+            app:quoteColor="#FF2196F3"
+            app:quoteStripeWidth="8dp" />
+    </ScrollView>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/divider2"
+        android:id="@+id/InputText3"
+        android:fillViewport="true">
+
+        <com.scrat.app.richtext.RichEditText
+            android:id="@+id/InputText03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="top|start"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:scrollbars="vertical"
+            app:bulletColor="#FF2196F3"
+            android:textSize="14sp"
+            app:bulletGapWidth="8dp"
+            app:bulletRadius="2dp"
+            app:historyEnable="true"
+            app:historySize="99"
+            app:linkColor="#FF2196F3"
+            app:linkUnderline="true"
+            app:quoteCapWidth="2dp"
+            app:quoteColor="#FF2196F3"
+            app:quoteStripeWidth="8dp" />
+    </ScrollView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/InputText4"
+        android:layout_alignParentStart="true"
+        android:background="#009E9E9E" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/Relativelayout2"
+        android:background="#009E9E9E"  />
+
+    <TextView
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@id/InputText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onSkipClick"
+        android:text="我确认好了（临时跳过按钮）"
+        android:textColor="@color/colorAccent" />
+
+
+</RelativeLayout>
